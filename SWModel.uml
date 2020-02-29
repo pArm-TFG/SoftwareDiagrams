@@ -104,6 +104,29 @@
       <subvertex xmi:type="uml:State" xmi:id="_M-PgIFseEeq-0ItwRsbHAg" name="Communications finished"/>
     </region>
   </packagedElement>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_l3eqkFseEeq-0ItwRsbHAg" name="ErrorsDuringExecution">
+    <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_o3GA4FsfEeq-0ItwRsbHAg" name="Abort execution" kind="exitPoint"/>
+    <region xmi:type="uml:Region" xmi:id="_mtK8cFseEeq-0ItwRsbHAg" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_ti1zwFseEeq-0ItwRsbHAg" name="Receive error" source="_pBqHkFseEeq-0ItwRsbHAg" target="_rYdm4FseEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_FDEj4FsfEeq-0ItwRsbHAg" name="Validate error" source="_rYdm4FseEeq-0ItwRsbHAg" target="_-sCwYFseEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_ScXgQFsfEeq-0ItwRsbHAg" name="Yes" source="_-sCwYFseEeq-0ItwRsbHAg" target="_LdebgFsfEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_jviRMFsfEeq-0ItwRsbHAg" name="Handle known error" source="_LdebgFsfEeq-0ItwRsbHAg" target="_fcOB4FsfEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_q-cH4FsfEeq-0ItwRsbHAg" name="Yes" source="_fcOB4FsfEeq-0ItwRsbHAg" target="_o3GA4FsfEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_wyRuwFsfEeq-0ItwRsbHAg" name="No" source="_fcOB4FsfEeq-0ItwRsbHAg" target="_vT9WoFsfEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_857dEFsfEeq-0ItwRsbHAg" name="No" source="_-sCwYFseEeq-0ItwRsbHAg" target="_5VFdUFsfEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_MFFYoFsgEeq-0ItwRsbHAg" name="Notify error" source="_5VFdUFsfEeq-0ItwRsbHAg" target="_H3iaIFsgEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_QjHqMFsgEeq-0ItwRsbHAg" name="No" source="_H3iaIFsgEeq-0ItwRsbHAg" target="_vT9WoFsfEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_WVMWgFsgEeq-0ItwRsbHAg" name="Yes" source="_H3iaIFsgEeq-0ItwRsbHAg" target="_o3GA4FsfEeq-0ItwRsbHAg"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_pBqHkFseEeq-0ItwRsbHAg" name="Errors during execution"/>
+      <subvertex xmi:type="uml:State" xmi:id="_rYdm4FseEeq-0ItwRsbHAg" name="Error received"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_-sCwYFseEeq-0ItwRsbHAg" name="Is a known error?" kind="choice"/>
+      <subvertex xmi:type="uml:State" xmi:id="_LdebgFsfEeq-0ItwRsbHAg" name="Known error"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_fcOB4FsfEeq-0ItwRsbHAg" name="Is fatal error?" kind="choice"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_vT9WoFsfEeq-0ItwRsbHAg" name="Normal function mode"/>
+      <subvertex xmi:type="uml:State" xmi:id="_5VFdUFsfEeq-0ItwRsbHAg" name="Unknown error"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_H3iaIFsgEeq-0ItwRsbHAg" name="Is fatal error?" kind="choice"/>
+    </region>
+  </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_qG7EwFNCEeqpnJZsrUAtSg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qG858FNCEeqpnJZsrUAtSg" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
