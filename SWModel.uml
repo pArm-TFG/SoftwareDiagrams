@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ODzYQFNCEeqpnJZsrUAtSg" name="SWModel">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_OELLsFNCEeqpnJZsrUAtSg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_XDnL4FNCEeqpnJZsrUAtSg" name="SystemPowerOn">
+    <region xmi:type="uml:Region" xmi:id="_Zrd-8FNCEeqpnJZsrUAtSg" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_i93-cFNCEeqpnJZsrUAtSg" source="_c2-4sFNCEeqpnJZsrUAtSg" target="_gaYG8FNCEeqpnJZsrUAtSg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_t7H5sFNDEeqpnJZsrUAtSg" name="Load resources" source="_gaYG8FNCEeqpnJZsrUAtSg" target="_sGnPIFNDEeqpnJZsrUAtSg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_y01aoFNDEeqpnJZsrUAtSg" name="Connect with pArm" source="_sGnPIFNDEeqpnJZsrUAtSg" target="_6o9TsFNCEeqpnJZsrUAtSg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_2ppJAFNDEeqpnJZsrUAtSg" name="No" source="_6o9TsFNCEeqpnJZsrUAtSg" target="_0fIZQFNDEeqpnJZsrUAtSg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_ylhW0FNEEeqpnJZsrUAtSg" name="Yes" source="_6o9TsFNCEeqpnJZsrUAtSg" target="_wzXcsFNEEeqpnJZsrUAtSg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_lxSZ4FNFEeqpnJZsrUAtSg" name="Check pArm components" source="_wzXcsFNEEeqpnJZsrUAtSg" target="_f2NikFNFEeqpnJZsrUAtSg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_qrRAkFNFEeqpnJZsrUAtSg" name="Wait for connection" source="_0fIZQFNDEeqpnJZsrUAtSg" target="_sGnPIFNDEeqpnJZsrUAtSg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_Bf0WcFNGEeqpnJZsrUAtSg" name="Yes" source="_f2NikFNFEeqpnJZsrUAtSg" target="__OB6AFNFEeqpnJZsrUAtSg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_H-xW4FNGEeqpnJZsrUAtSg" name="Continue execution" source="__OB6AFNFEeqpnJZsrUAtSg" target="_FFif8FNGEeqpnJZsrUAtSg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_nl8Y8FNGEeqpnJZsrUAtSg" name="No" source="_f2NikFNFEeqpnJZsrUAtSg" target="_crRbIFNGEeqpnJZsrUAtSg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_xD2d0FNGEeqpnJZsrUAtSg" name="Abort execution" source="_crRbIFNGEeqpnJZsrUAtSg" target="_shS4oFNGEeqpnJZsrUAtSg"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_c2-4sFNCEeqpnJZsrUAtSg" name="AppOn"/>
+      <subvertex xmi:type="uml:State" xmi:id="_gaYG8FNCEeqpnJZsrUAtSg" name="Application started"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_6o9TsFNCEeqpnJZsrUAtSg" name="Is pArm connected?" kind="choice"/>
+      <subvertex xmi:type="uml:State" xmi:id="_sGnPIFNDEeqpnJZsrUAtSg" name="Resources loaded"/>
+      <subvertex xmi:type="uml:State" xmi:id="_0fIZQFNDEeqpnJZsrUAtSg" name="pArm not connected"/>
+      <subvertex xmi:type="uml:State" xmi:id="_wzXcsFNEEeqpnJZsrUAtSg" name="pArm connected"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_f2NikFNFEeqpnJZsrUAtSg" name="Are components OK?" kind="choice"/>
+      <subvertex xmi:type="uml:State" xmi:id="__OB6AFNFEeqpnJZsrUAtSg" name="Initialization finished"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_FFif8FNGEeqpnJZsrUAtSg" name="Normal function mode"/>
+      <subvertex xmi:type="uml:State" xmi:id="_crRbIFNGEeqpnJZsrUAtSg" name="pArm status not OK"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_shS4oFNGEeqpnJZsrUAtSg" name="Errors during execution"/>
+    </region>
+  </packagedElement>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_F3oAAFNNEeqpnJZsrUAtSg" name="NormalFunctionMode">
+    <region xmi:type="uml:Region" xmi:id="_G5MxwFNNEeqpnJZsrUAtSg" name="Region1">
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_PV_-8FNNEeqpnJZsrUAtSg" name="Normal function mode"/>
+    </region>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_qG7EwFNCEeqpnJZsrUAtSg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qG858FNCEeqpnJZsrUAtSg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>
