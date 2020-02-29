@@ -31,7 +31,21 @@
   </packagedElement>
   <packagedElement xmi:type="uml:StateMachine" xmi:id="_F3oAAFNNEeqpnJZsrUAtSg" name="NormalFunctionMode">
     <region xmi:type="uml:Region" xmi:id="_G5MxwFNNEeqpnJZsrUAtSg" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_IiGQgFsUEeq-0ItwRsbHAg" source="_PV_-8FNNEeqpnJZsrUAtSg" target="_FPFnoFsUEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_cDRxIFsUEeq-0ItwRsbHAg" name="Input received" kind="local" source="_FPFnoFsUEeq-0ItwRsbHAg" target="_T5tB8FsUEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_nrgYgFsUEeq-0ItwRsbHAg" name="Handle input status" source="_T5tB8FsUEeq-0ItwRsbHAg" target="_kEsC0FsUEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_9u1s0FsUEeq-0ItwRsbHAg" name="Yes" source="_kEsC0FsUEeq-0ItwRsbHAg" target="_7SJn8FsUEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_KxhgAFsVEeq-0ItwRsbHAg" name="Move robot" source="_7SJn8FsUEeq-0ItwRsbHAg" target="_E6k6wFsVEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_QvmoAFsVEeq-0ItwRsbHAg" name="No" source="_kEsC0FsUEeq-0ItwRsbHAg" target="_OfPu8FsVEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_YkkZIFsVEeq-0ItwRsbHAg" name="Notify error" source="_OfPu8FsVEeq-0ItwRsbHAg" target="_Vfe3gFsVEeq-0ItwRsbHAg"/>
       <subvertex xmi:type="uml:Pseudostate" xmi:id="_PV_-8FNNEeqpnJZsrUAtSg" name="Normal function mode"/>
+      <subvertex xmi:type="uml:State" xmi:id="_FPFnoFsUEeq-0ItwRsbHAg" name="WaitingForInput"/>
+      <subvertex xmi:type="uml:State" xmi:id="_T5tB8FsUEeq-0ItwRsbHAg" name="ValidateInput"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_kEsC0FsUEeq-0ItwRsbHAg" name="Is input OK?" kind="choice"/>
+      <subvertex xmi:type="uml:State" xmi:id="_7SJn8FsUEeq-0ItwRsbHAg" name="InputDataOK"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_E6k6wFsVEeq-0ItwRsbHAg" name="Robot movment mode"/>
+      <subvertex xmi:type="uml:State" xmi:id="_OfPu8FsVEeq-0ItwRsbHAg" name="WrongInputData"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_Vfe3gFsVEeq-0ItwRsbHAg" name="Errors during execution"/>
     </region>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_qG7EwFNCEeqpnJZsrUAtSg">
