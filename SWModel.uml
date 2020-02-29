@@ -54,7 +54,7 @@
       <subvertex xmi:type="uml:Pseudostate" xmi:id="_LHW-YFsbEeq-0ItwRsbHAg" name="Is the input a movement?" kind="choice"/>
       <subvertex xmi:type="uml:Pseudostate" xmi:id="_0R3-8FsbEeq-0ItwRsbHAg" name="Is the input a system close event?" kind="choice"/>
       <subvertex xmi:type="uml:State" xmi:id="_AYM3kFscEeq-0ItwRsbHAg" name="Unexpected input"/>
-      <subvertex xmi:type="uml:FinalState" xmi:id="_ULBh0FscEeq-0ItwRsbHAg" name="SystemPowerOff"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_ULBh0FscEeq-0ItwRsbHAg" name="System power off"/>
     </region>
   </packagedElement>
   <packagedElement xmi:type="uml:StateMachine" xmi:id="_Mtdy0FsWEeq-0ItwRsbHAg" name="RobotMovementMode">
@@ -87,6 +87,21 @@
       <subvertex xmi:type="uml:State" xmi:id="_3MYvoFsYEeq-0ItwRsbHAg" name="Robot moving"/>
       <subvertex xmi:type="uml:Pseudostate" xmi:id="_5i3e0FsYEeq-0ItwRsbHAg" name="Is the final position?" kind="choice"/>
       <subvertex xmi:type="uml:FinalState" xmi:id="_z-64oFsZEeq-0ItwRsbHAg" name="Normal function mode"/>
+    </region>
+  </packagedElement>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_tEqU4FscEeq-0ItwRsbHAg" name="SytemPowerOff">
+    <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_Trlh4FseEeq-0ItwRsbHAg" name="Exit application" kind="exitPoint"/>
+    <region xmi:type="uml:Region" xmi:id="_t9R-8FscEeq-0ItwRsbHAg" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_z2buMFsdEeq-0ItwRsbHAg" name="Stop moving" source="_oN2hgFsdEeq-0ItwRsbHAg" target="_yLyKQFsdEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_CCEtgFseEeq-0ItwRsbHAg" name="Move robot to safe position" source="_yLyKQFsdEeq-0ItwRsbHAg" target="_-oQ5EFsdEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_KDdKAFseEeq-0ItwRsbHAg" name="Unload resources" source="_-oQ5EFsdEeq-0ItwRsbHAg" target="_IQ2j8FseEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_POr4wFseEeq-0ItwRsbHAg" name="Finish communications" source="_IQ2j8FseEeq-0ItwRsbHAg" target="_M-PgIFseEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_W75cEFseEeq-0ItwRsbHAg" name="Finish system power off procedure" source="_M-PgIFseEeq-0ItwRsbHAg" target="_Trlh4FseEeq-0ItwRsbHAg"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_oN2hgFsdEeq-0ItwRsbHAg" name="System power off"/>
+      <subvertex xmi:type="uml:State" xmi:id="_yLyKQFsdEeq-0ItwRsbHAg" name="Movements stopped"/>
+      <subvertex xmi:type="uml:State" xmi:id="_-oQ5EFsdEeq-0ItwRsbHAg" name="Robot in safe position"/>
+      <subvertex xmi:type="uml:State" xmi:id="_IQ2j8FseEeq-0ItwRsbHAg" name="Resources unloaded"/>
+      <subvertex xmi:type="uml:State" xmi:id="_M-PgIFseEeq-0ItwRsbHAg" name="Communications finished"/>
     </region>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_qG7EwFNCEeqpnJZsrUAtSg">
