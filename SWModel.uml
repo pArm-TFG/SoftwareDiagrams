@@ -3,7 +3,7 @@
   <packageImport xmi:type="uml:PackageImport" xmi:id="_OELLsFNCEeqpnJZsrUAtSg">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
-  <packagedElement xmi:type="uml:StateMachine" xmi:id="_XDnL4FNCEeqpnJZsrUAtSg" name="SystemPowerOn">
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_XDnL4FNCEeqpnJZsrUAtSg" name="S1SystemPowerOn">
     <region xmi:type="uml:Region" xmi:id="_Zrd-8FNCEeqpnJZsrUAtSg" name="Region1">
       <transition xmi:type="uml:Transition" xmi:id="_i93-cFNCEeqpnJZsrUAtSg" source="_c2-4sFNCEeqpnJZsrUAtSg" target="_gaYG8FNCEeqpnJZsrUAtSg"/>
       <transition xmi:type="uml:Transition" xmi:id="_t7H5sFNDEeqpnJZsrUAtSg" name="Load resources" source="_gaYG8FNCEeqpnJZsrUAtSg" target="_sGnPIFNDEeqpnJZsrUAtSg"/>
@@ -16,7 +16,7 @@
       <transition xmi:type="uml:Transition" xmi:id="_H-xW4FNGEeqpnJZsrUAtSg" name="Continue execution" source="__OB6AFNFEeqpnJZsrUAtSg" target="_FFif8FNGEeqpnJZsrUAtSg"/>
       <transition xmi:type="uml:Transition" xmi:id="_nl8Y8FNGEeqpnJZsrUAtSg" name="No" source="_f2NikFNFEeqpnJZsrUAtSg" target="_crRbIFNGEeqpnJZsrUAtSg"/>
       <transition xmi:type="uml:Transition" xmi:id="_xD2d0FNGEeqpnJZsrUAtSg" name="Abort execution" source="_crRbIFNGEeqpnJZsrUAtSg" target="_shS4oFNGEeqpnJZsrUAtSg"/>
-      <subvertex xmi:type="uml:Pseudostate" xmi:id="_c2-4sFNCEeqpnJZsrUAtSg" name="AppOn"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_c2-4sFNCEeqpnJZsrUAtSg" name="S1 - System Power On"/>
       <subvertex xmi:type="uml:State" xmi:id="_gaYG8FNCEeqpnJZsrUAtSg" name="Application started"/>
       <subvertex xmi:type="uml:Pseudostate" xmi:id="_6o9TsFNCEeqpnJZsrUAtSg" name="Is pArm connected?" kind="choice"/>
       <subvertex xmi:type="uml:State" xmi:id="_sGnPIFNDEeqpnJZsrUAtSg" name="Resources loaded"/>
@@ -125,6 +125,30 @@
       <subvertex xmi:type="uml:FinalState" xmi:id="_vT9WoFsfEeq-0ItwRsbHAg" name="Normal function mode"/>
       <subvertex xmi:type="uml:State" xmi:id="_5VFdUFsfEeq-0ItwRsbHAg" name="Unknown error"/>
       <subvertex xmi:type="uml:Pseudostate" xmi:id="_H3iaIFsgEeq-0ItwRsbHAg" name="Is fatal error?" kind="choice"/>
+    </region>
+  </packagedElement>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_YjXNQFvbEeqHfuZjfe3jHA" name="S2SystemPowerOn">
+    <region xmi:type="uml:Region" xmi:id="_ZeGXMFvbEeqHfuZjfe3jHA" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_5M9VoFvbEeqHfuZjfe3jHA" source="_hISbsFvbEeqHfuZjfe3jHA" target="_lWRfEFvbEeqHfuZjfe3jHA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_AmBN4FvcEeqHfuZjfe3jHA" name="Load resources" source="_lWRfEFvbEeqHfuZjfe3jHA" target="_-u2Q4FvbEeqHfuZjfe3jHA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_MnDW0FvcEeqHfuZjfe3jHA" name="Check connection" source="_-u2Q4FvbEeqHfuZjfe3jHA" target="_JcLWQFvcEeqHfuZjfe3jHA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_Q5NIgFvcEeqHfuZjfe3jHA" name="No" source="_JcLWQFvcEeqHfuZjfe3jHA" target="_-u2Q4FvbEeqHfuZjfe3jHA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_Y-P9AFvcEeqHfuZjfe3jHA" name="Yes" source="_JcLWQFvcEeqHfuZjfe3jHA" target="_XYSEwFvcEeqHfuZjfe3jHA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_eyJOQFvcEeqHfuZjfe3jHA" name="Check system health" source="_XYSEwFvcEeqHfuZjfe3jHA" target="_bvk1IFvcEeqHfuZjfe3jHA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_u_2L8FvcEeqHfuZjfe3jHA" name="Yes" source="_bvk1IFvcEeqHfuZjfe3jHA" target="_s2R3YFvcEeqHfuZjfe3jHA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_2F3MYFvcEeqHfuZjfe3jHA" name="Notify OK" source="_s2R3YFvcEeqHfuZjfe3jHA" target="_zYCUMFvcEeqHfuZjfe3jHA"/>
+      <transition xmi:type="uml:Transition" xmi:id="__pFPEFvcEeqHfuZjfe3jHA" name="No" source="_bvk1IFvcEeqHfuZjfe3jHA" target="_8rMhoFvcEeqHfuZjfe3jHA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_zY9r0FvdEeqHfuZjfe3jHA" name="Notify not OK" source="_8rMhoFvcEeqHfuZjfe3jHA" target="_ubXJYFvdEeqHfuZjfe3jHA"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_hISbsFvbEeqHfuZjfe3jHA" name="S2 - System Power On"/>
+      <subvertex xmi:type="uml:State" xmi:id="_lWRfEFvbEeqHfuZjfe3jHA" name="Application started"/>
+      <subvertex xmi:type="uml:State" xmi:id="_-u2Q4FvbEeqHfuZjfe3jHA" name="Resources loaded"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_JcLWQFvcEeqHfuZjfe3jHA" name="Is S1 connected?" kind="choice"/>
+      <subvertex xmi:type="uml:State" xmi:id="_XYSEwFvcEeqHfuZjfe3jHA" name="S1 connected"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_bvk1IFvcEeqHfuZjfe3jHA" name="Are components OK?" kind="choice"/>
+      <subvertex xmi:type="uml:State" xmi:id="_s2R3YFvcEeqHfuZjfe3jHA" name="Components OK"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_zYCUMFvcEeqHfuZjfe3jHA" name="Normal function mode"/>
+      <subvertex xmi:type="uml:State" xmi:id="_8rMhoFvcEeqHfuZjfe3jHA" name="Components not OK"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_ubXJYFvdEeqHfuZjfe3jHA" name="Errors during execution"/>
     </region>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_qG7EwFNCEeqpnJZsrUAtSg">
