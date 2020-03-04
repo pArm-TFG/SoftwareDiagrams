@@ -69,14 +69,17 @@
       <transition xmi:type="uml:Transition" xmi:id="_05gY8FsWEeq-0ItwRsbHAg" name="Process input" source="_YpbOgFsWEeq-0ItwRsbHAg" target="_xqL9QFsWEeq-0ItwRsbHAg"/>
       <transition xmi:type="uml:Transition" xmi:id="_T0EzsFsXEeq-0ItwRsbHAg" name="Transmit input to the robot" source="_xqL9QFsWEeq-0ItwRsbHAg" target="_O2xzQFsXEeq-0ItwRsbHAg"/>
       <transition xmi:type="uml:Transition" xmi:id="_G3zVEFsYEeq-0ItwRsbHAg" name="Check robot status" source="_4dK3gFsXEeq-0ItwRsbHAg" target="_EIJQ4FsYEeq-0ItwRsbHAg"/>
-      <transition xmi:type="uml:Transition" xmi:id="_PIHlcFsYEeq-0ItwRsbHAg" name="Yes" source="_EIJQ4FsYEeq-0ItwRsbHAg" target="_4dK3gFsXEeq-0ItwRsbHAg"/>
       <transition xmi:type="uml:Transition" xmi:id="_VliU0FsYEeq-0ItwRsbHAg" name="No" source="_EIJQ4FsYEeq-0ItwRsbHAg" target="_nruTkFsXEeq-0ItwRsbHAg"/>
       <transition xmi:type="uml:Transition" xmi:id="_bBSL0FsYEeq-0ItwRsbHAg" name="Robot start moving" source="_O2xzQFsXEeq-0ItwRsbHAg" target="_4dK3gFsXEeq-0ItwRsbHAg"/>
       <transition xmi:type="uml:Transition" xmi:id="_8tiEAFsYEeq-0ItwRsbHAg" name="Check position" source="_3MYvoFsYEeq-0ItwRsbHAg" target="_5i3e0FsYEeq-0ItwRsbHAg"/>
       <transition xmi:type="uml:Transition" xmi:id="_N9iMMFsZEeq-0ItwRsbHAg" name="No" source="_5i3e0FsYEeq-0ItwRsbHAg" target="_3MYvoFsYEeq-0ItwRsbHAg"/>
       <transition xmi:type="uml:Transition" xmi:id="_R9Xe0FsZEeq-0ItwRsbHAg" name="Robot start moving" source="_O2xzQFsXEeq-0ItwRsbHAg" target="_3MYvoFsYEeq-0ItwRsbHAg"/>
       <transition xmi:type="uml:Transition" xmi:id="_fwWGgFsZEeq-0ItwRsbHAg" name="Yes" source="_5i3e0FsYEeq-0ItwRsbHAg" target="_nruTkFsXEeq-0ItwRsbHAg"/>
-      <transition xmi:type="uml:Transition" xmi:id="_5yVowFsZEeq-0ItwRsbHAg" name="Robot movment finished" source="_nruTkFsXEeq-0ItwRsbHAg" target="_z-64oFsZEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_5yVowFsZEeq-0ItwRsbHAg" name="Robot movment stopped" source="_nruTkFsXEeq-0ItwRsbHAg" target="_z-64oFsZEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_TyiZAF5AEeqaCrdgLceo6Q" name="No" source="_MBhTwF5AEeqaCrdgLceo6Q" target="_4dK3gFsXEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_wr_QkF5AEeqaCrdgLceo6Q" name="Yes" source="_MBhTwF5AEeqaCrdgLceo6Q" target="_tckuQF5AEeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_9BEW4F5AEeqaCrdgLceo6Q" name="Yes" source="_EIJQ4FsYEeq-0ItwRsbHAg" target="_MBhTwF5AEeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_MwW6QF5BEeqaCrdgLceo6Q" name="Stop moving robot" source="_tckuQF5AEeqaCrdgLceo6Q" target="_nruTkFsXEeq-0ItwRsbHAg"/>
       <subvertex xmi:type="uml:Pseudostate" xmi:id="_Siiv0FsWEeq-0ItwRsbHAg" name="Robot movement mode"/>
       <subvertex xmi:type="uml:State" xmi:id="_YpbOgFsWEeq-0ItwRsbHAg" name="Input received"/>
       <subvertex xmi:type="uml:State" xmi:id="_xqL9QFsWEeq-0ItwRsbHAg" name="Input processed"/>
@@ -87,6 +90,8 @@
       <subvertex xmi:type="uml:State" xmi:id="_3MYvoFsYEeq-0ItwRsbHAg" name="Robot moving"/>
       <subvertex xmi:type="uml:Pseudostate" xmi:id="_5i3e0FsYEeq-0ItwRsbHAg" name="Is the final position?" kind="choice"/>
       <subvertex xmi:type="uml:FinalState" xmi:id="_z-64oFsZEeq-0ItwRsbHAg" name="Normal function mode"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_MBhTwF5AEeqaCrdgLceo6Q" name="Is movement cancelled?" kind="choice"/>
+      <subvertex xmi:type="uml:State" xmi:id="_tckuQF5AEeqaCrdgLceo6Q" name="Movement cancelled"/>
     </region>
   </packagedElement>
   <packagedElement xmi:type="uml:StateMachine" xmi:id="_tEqU4FscEeq-0ItwRsbHAg" name="SytemPowerOff">
@@ -105,18 +110,17 @@
     </region>
   </packagedElement>
   <packagedElement xmi:type="uml:StateMachine" xmi:id="_l3eqkFseEeq-0ItwRsbHAg" name="ErrorsDuringExecution">
-    <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_o3GA4FsfEeq-0ItwRsbHAg" name="Abort execution" kind="exitPoint"/>
     <region xmi:type="uml:Region" xmi:id="_mtK8cFseEeq-0ItwRsbHAg" name="Region1">
       <transition xmi:type="uml:Transition" xmi:id="_ti1zwFseEeq-0ItwRsbHAg" name="Receive error" source="_pBqHkFseEeq-0ItwRsbHAg" target="_rYdm4FseEeq-0ItwRsbHAg"/>
       <transition xmi:type="uml:Transition" xmi:id="_FDEj4FsfEeq-0ItwRsbHAg" name="Validate error" source="_rYdm4FseEeq-0ItwRsbHAg" target="_-sCwYFseEeq-0ItwRsbHAg"/>
       <transition xmi:type="uml:Transition" xmi:id="_ScXgQFsfEeq-0ItwRsbHAg" name="Yes" source="_-sCwYFseEeq-0ItwRsbHAg" target="_LdebgFsfEeq-0ItwRsbHAg"/>
       <transition xmi:type="uml:Transition" xmi:id="_jviRMFsfEeq-0ItwRsbHAg" name="Handle known error" source="_LdebgFsfEeq-0ItwRsbHAg" target="_fcOB4FsfEeq-0ItwRsbHAg"/>
-      <transition xmi:type="uml:Transition" xmi:id="_q-cH4FsfEeq-0ItwRsbHAg" name="Yes" source="_fcOB4FsfEeq-0ItwRsbHAg" target="_o3GA4FsfEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_q-cH4FsfEeq-0ItwRsbHAg" name="Yes" source="_fcOB4FsfEeq-0ItwRsbHAg" target="_eCkaMF5HEeqaCrdgLceo6Q"/>
       <transition xmi:type="uml:Transition" xmi:id="_wyRuwFsfEeq-0ItwRsbHAg" name="No" source="_fcOB4FsfEeq-0ItwRsbHAg" target="_vT9WoFsfEeq-0ItwRsbHAg"/>
       <transition xmi:type="uml:Transition" xmi:id="_857dEFsfEeq-0ItwRsbHAg" name="No" source="_-sCwYFseEeq-0ItwRsbHAg" target="_5VFdUFsfEeq-0ItwRsbHAg"/>
       <transition xmi:type="uml:Transition" xmi:id="_MFFYoFsgEeq-0ItwRsbHAg" name="Notify error" source="_5VFdUFsfEeq-0ItwRsbHAg" target="_H3iaIFsgEeq-0ItwRsbHAg"/>
       <transition xmi:type="uml:Transition" xmi:id="_QjHqMFsgEeq-0ItwRsbHAg" name="No" source="_H3iaIFsgEeq-0ItwRsbHAg" target="_vT9WoFsfEeq-0ItwRsbHAg"/>
-      <transition xmi:type="uml:Transition" xmi:id="_WVMWgFsgEeq-0ItwRsbHAg" name="Yes" source="_H3iaIFsgEeq-0ItwRsbHAg" target="_o3GA4FsfEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_s0ogUF5HEeqaCrdgLceo6Q" name="Yes" source="_H3iaIFsgEeq-0ItwRsbHAg" target="_eCkaMF5HEeqaCrdgLceo6Q"/>
       <subvertex xmi:type="uml:Pseudostate" xmi:id="_pBqHkFseEeq-0ItwRsbHAg" name="Errors during execution"/>
       <subvertex xmi:type="uml:State" xmi:id="_rYdm4FseEeq-0ItwRsbHAg" name="Error received"/>
       <subvertex xmi:type="uml:Pseudostate" xmi:id="_-sCwYFseEeq-0ItwRsbHAg" name="Is a known error?" kind="choice"/>
@@ -125,6 +129,7 @@
       <subvertex xmi:type="uml:FinalState" xmi:id="_vT9WoFsfEeq-0ItwRsbHAg" name="Normal function mode"/>
       <subvertex xmi:type="uml:State" xmi:id="_5VFdUFsfEeq-0ItwRsbHAg" name="Unknown error"/>
       <subvertex xmi:type="uml:Pseudostate" xmi:id="_H3iaIFsgEeq-0ItwRsbHAg" name="Is fatal error?" kind="choice"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_eCkaMF5HEeqaCrdgLceo6Q" name="System power off"/>
     </region>
   </packagedElement>
   <packagedElement xmi:type="uml:StateMachine" xmi:id="_YjXNQFvbEeqHfuZjfe3jHA" name="S2SystemPowerOn">
@@ -149,6 +154,72 @@
       <subvertex xmi:type="uml:FinalState" xmi:id="_zYCUMFvcEeqHfuZjfe3jHA" name="Normal function mode"/>
       <subvertex xmi:type="uml:State" xmi:id="_8rMhoFvcEeqHfuZjfe3jHA" name="Components not OK"/>
       <subvertex xmi:type="uml:FinalState" xmi:id="_ubXJYFvdEeqHfuZjfe3jHA" name="Errors during execution"/>
+    </region>
+  </packagedElement>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_6A5uUF48EeqaCrdgLceo6Q" name="S2NormalFunctionMode">
+    <region xmi:type="uml:Region" xmi:id="_7Tq9wF48EeqaCrdgLceo6Q" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_v57o4F49EeqaCrdgLceo6Q" source="_90FsEF48EeqaCrdgLceo6Q" target="_tgtHsF49EeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_2va6AF49EeqaCrdgLceo6Q" name="Input received" source="_tgtHsF49EeqaCrdgLceo6Q" target="_08eVsF49EeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_-yOS0F49EeqaCrdgLceo6Q" name="Check input" source="_08eVsF49EeqaCrdgLceo6Q" target="_5nwZEF49EeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_Io9ucF4-EeqaCrdgLceo6Q" name="Yes" source="_5nwZEF49EeqaCrdgLceo6Q" target="_F0qa0F4-EeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_RDr4AF4-EeqaCrdgLceo6Q" name="Process movement" source="_F0qa0F4-EeqaCrdgLceo6Q" target="_MagGYF4-EeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_cWS0sF4-EeqaCrdgLceo6Q" name="No" source="_5nwZEF49EeqaCrdgLceo6Q" target="_X-MzEF4-EeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_kywqsF4-EeqaCrdgLceo6Q" name="Process system order" source="_X-MzEF4-EeqaCrdgLceo6Q" target="_hYVyQF4-EeqaCrdgLceo6Q"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_90FsEF48EeqaCrdgLceo6Q" name="Normal function mode"/>
+      <subvertex xmi:type="uml:State" xmi:id="_tgtHsF49EeqaCrdgLceo6Q" name="Wait for input"/>
+      <subvertex xmi:type="uml:State" xmi:id="_08eVsF49EeqaCrdgLceo6Q" name="Translate input"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_5nwZEF49EeqaCrdgLceo6Q" name="Is the input a movement?" kind="choice"/>
+      <subvertex xmi:type="uml:State" xmi:id="_F0qa0F4-EeqaCrdgLceo6Q" name="Input is a movement"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_MagGYF4-EeqaCrdgLceo6Q" name="Movement handler"/>
+      <subvertex xmi:type="uml:State" xmi:id="_X-MzEF4-EeqaCrdgLceo6Q" name="Input is not a movement"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_hYVyQF4-EeqaCrdgLceo6Q" name="System power off"/>
+    </region>
+  </packagedElement>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_UTpXcF4_EeqaCrdgLceo6Q" name="S2MovementHandler">
+    <region xmi:type="uml:Region" xmi:id="_VM23YF4_EeqaCrdgLceo6Q" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_nUtbUF5EEeqaCrdgLceo6Q" source="_YQMFgF4_EeqaCrdgLceo6Q" target="_kp1wgF5EEeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_vtS24F5EEeqaCrdgLceo6Q" name="Calculate movements" source="_kp1wgF5EEeqaCrdgLceo6Q" target="_ssOSkF5EEeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_78JZYF5EEeqaCrdgLceo6Q" name="Start moving" source="_ssOSkF5EEeqaCrdgLceo6Q" target="_51M7AF5EEeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_W-NRgF5FEeqaCrdgLceo6Q" name="Check position" source="_51M7AF5EEeqaCrdgLceo6Q" target="_DjGjsF5FEeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_bb_rcF5FEeqaCrdgLceo6Q" name="Yes" source="_DjGjsF5FEeqaCrdgLceo6Q" target="_AC4lQF5FEeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_kS_hUF5FEeqaCrdgLceo6Q" name="No" source="_DjGjsF5FEeqaCrdgLceo6Q" target="_f1WRUF5FEeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_pleuoF5FEeqaCrdgLceo6Q" name="No" source="_f1WRUF5FEeqaCrdgLceo6Q" target="_51M7AF5EEeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_tggZwF5FEeqaCrdgLceo6Q" name="Yes" source="_f1WRUF5FEeqaCrdgLceo6Q" target="_AC4lQF5FEeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_8fMmoF5FEeqaCrdgLceo6Q" name="Movement stopped" source="_AC4lQF5FEeqaCrdgLceo6Q" target="_4IgTMF5FEeqaCrdgLceo6Q"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_YQMFgF4_EeqaCrdgLceo6Q" name="Movement handler"/>
+      <subvertex xmi:type="uml:State" xmi:id="_kp1wgF5EEeqaCrdgLceo6Q" name="Receive movement"/>
+      <subvertex xmi:type="uml:State" xmi:id="_ssOSkF5EEeqaCrdgLceo6Q" name="Moves calculated"/>
+      <subvertex xmi:type="uml:State" xmi:id="_51M7AF5EEeqaCrdgLceo6Q" name="Robot moving"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_AC4lQF5FEeqaCrdgLceo6Q" name="Movement finished" kind="join"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_DjGjsF5FEeqaCrdgLceo6Q" name="Is final position?" kind="choice"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_f1WRUF5FEeqaCrdgLceo6Q" name="Is movement cancelled?" kind="choice"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_4IgTMF5FEeqaCrdgLceo6Q" name="Normal function mode"/>
+    </region>
+  </packagedElement>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_Iseb0F5GEeqaCrdgLceo6Q" name="S2SystemPowerOff">
+    <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_OYBz8F5HEeqaCrdgLceo6Q" name="Wait for a new connection" kind="exitPoint"/>
+    <region xmi:type="uml:Region" xmi:id="_Jbe24F5GEeqaCrdgLceo6Q" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_ukKZsF5GEeqaCrdgLceo6Q" name="Stop moving" source="_MyFmUF5GEeqaCrdgLceo6Q" target="_sE3swF5GEeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_2xfngF5GEeqaCrdgLceo6Q" name="Move arm to safe position" source="_sE3swF5GEeqaCrdgLceo6Q" target="_1K9HgF5GEeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_8p1T4F5GEeqaCrdgLceo6Q" name="Stop communication" source="_1K9HgF5GEeqaCrdgLceo6Q" target="_6F4wcF5GEeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_RgpxwF5HEeqaCrdgLceo6Q" name="Finish power-off procedure" source="_6F4wcF5GEeqaCrdgLceo6Q" target="_OYBz8F5HEeqaCrdgLceo6Q"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_MyFmUF5GEeqaCrdgLceo6Q" name="System power off"/>
+      <subvertex xmi:type="uml:State" xmi:id="_sE3swF5GEeqaCrdgLceo6Q" name="Stopped moving"/>
+      <subvertex xmi:type="uml:State" xmi:id="_1K9HgF5GEeqaCrdgLceo6Q" name="Arm in safe position"/>
+      <subvertex xmi:type="uml:State" xmi:id="_6F4wcF5GEeqaCrdgLceo6Q" name="Communication stopped"/>
+    </region>
+  </packagedElement>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_x9dbUF5HEeqaCrdgLceo6Q" name="S2ErrorsDuringExecution">
+    <region xmi:type="uml:Region" xmi:id="_zCLnsF5HEeqaCrdgLceo6Q" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_-L8xcF5HEeqaCrdgLceo6Q" name="Receive error" source="_1fPgAF5HEeqaCrdgLceo6Q" target="_7m1JUF5HEeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_Ms7uoF5IEeqaCrdgLceo6Q" name="Notify error" source="_7m1JUF5HEeqaCrdgLceo6Q" target="_J1iqwF5IEeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_Rus_YF5IEeqaCrdgLceo6Q" name="Communicate error" source="_J1iqwF5IEeqaCrdgLceo6Q" target="_PiniUF5IEeqaCrdgLceo6Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_Xim3sF5IEeqaCrdgLceo6Q" name="Finish error handler" source="_PiniUF5IEeqaCrdgLceo6Q" target="_UhU4AF5IEeqaCrdgLceo6Q"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_1fPgAF5HEeqaCrdgLceo6Q" name="Errors during execution"/>
+      <subvertex xmi:type="uml:State" xmi:id="_7m1JUF5HEeqaCrdgLceo6Q" name="Error received"/>
+      <subvertex xmi:type="uml:State" xmi:id="_J1iqwF5IEeqaCrdgLceo6Q" name="Error visually communicated"/>
+      <subvertex xmi:type="uml:State" xmi:id="_PiniUF5IEeqaCrdgLceo6Q" name="Error communicated to S1"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_UhU4AF5IEeqaCrdgLceo6Q" name="Normal function mode"/>
     </region>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_qG7EwFNCEeqpnJZsrUAtSg">
