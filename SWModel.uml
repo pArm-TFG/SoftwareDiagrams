@@ -600,6 +600,139 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_f3TTMGUWEeqRHftdgbhjKA" name="run"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_gnxt4GUWEeqRHftdgbhjKA" name="end"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_iyY8kGUcEeqRHftdgbhjKA" name="UART">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_kz4TMGUcEeqRHftdgbhjKA" name="baud" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_4EXscGUcEeqRHftdgbhjKA" name="init">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_9e7QoGUcEeqRHftdgbhjKA" name="baudrate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_9e7QoWUcEeqRHftdgbhjKA" name="baudrate" value="9600"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_o40vUGUcEeqRHftdgbhjKA" name="sendMessage">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_u4Wo0GUcEeqRHftdgbhjKA" name="msg">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_vikDcGUcEeqRHftdgbhjKA" name="receiveBytes">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_zByjYGUcEeqRHftdgbhjKA" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByteArray"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_0lOFAGUcEeqRHftdgbhjKA" name="setBaudrate">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_3dLwoGUcEeqRHftdgbhjKA" name="baudrate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_AocmUGUdEeqRHftdgbhjKA" name="receiveOrder">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Cr32oGUdEeqRHftdgbhjKA" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_aNBz0GUdEeqRHftdgbhjKA" name="MovementComputer">
+    <elementImport xmi:type="uml:ElementImport" xmi:id="_shnJAGUeEeqRHftdgbhjKA" importedElement="_zABMUGUdEeqRHftdgbhjKA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_d21zIGUdEeqRHftdgbhjKA" name="matrices" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_h3aFkGUdEeqRHftdgbhjKA" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ds1GEGUeEeqRHftdgbhjKA" name="computeMovement">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iGvFkGUeEeqRHftdgbhjKA" name="x">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_jCN2YGUeEeqRHftdgbhjKA" name="y">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_j4n58GUeEeqRHftdgbhjKA" name="z">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_mdaK4GUeEeqRHftdgbhjKA" type="_zABMUGUdEeqRHftdgbhjKA" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_zABMUGUdEeqRHftdgbhjKA" name="Movement">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_0MUnYGUdEeqRHftdgbhjKA" name="motor" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_24QpMGUdEeqRHftdgbhjKA" name="direction" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EChar"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Ary_0GUeEeqRHftdgbhjKA" name="duration" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_EEeL0GUeEeqRHftdgbhjKA" name="getMotor">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_F6FpoGUeEeqRHftdgbhjKA" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_GbGsAGUeEeqRHftdgbhjKA" name="getDirection">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_MVg08GUeEeqRHftdgbhjKA" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EChar"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_M8vNAGUeEeqRHftdgbhjKA" name="getDuration">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_QCYvUGUeEeqRHftdgbhjKA" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_QgMFoGUeEeqRHftdgbhjKA" name="setMotor">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_R8j9AGUeEeqRHftdgbhjKA" name="motor">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_T5YPAGUeEeqRHftdgbhjKA" name="setDirection">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_WDNCQGUeEeqRHftdgbhjKA" name="direction">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EChar"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_WtWygGUeEeqRHftdgbhjKA" name="setDuration">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_YpzREGUeEeqRHftdgbhjKA" name="duration">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_3YnHwGUeEeqRHftdgbhjKA" name="Application">
+    <elementImport xmi:type="uml:ElementImport" xmi:id="_YCaEcGUfEeqRHftdgbhjKA" importedElement="_aNBz0GUdEeqRHftdgbhjKA"/>
+    <elementImport xmi:type="uml:ElementImport" xmi:id="_ZastEGUfEeqRHftdgbhjKA" importedElement="_BkwLoGUfEeqRHftdgbhjKA"/>
+    <elementImport xmi:type="uml:ElementImport" xmi:id="_bFh3MGUfEeqRHftdgbhjKA" importedElement="_iyY8kGUcEeqRHftdgbhjKA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_50q6gGUeEeqRHftdgbhjKA" name="uart" visibility="private" type="_iyY8kGUcEeqRHftdgbhjKA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_9XW-IGUeEeqRHftdgbhjKA" name="computer" visibility="private" type="_aNBz0GUdEeqRHftdgbhjKA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_d7KAgGUfEeqRHftdgbhjKA" name="handler" visibility="private" type="_BkwLoGUfEeqRHftdgbhjKA"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_m6xm4GUfEeqRHftdgbhjKA" name="receiveMovement"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_sGv8gGUfEeqRHftdgbhjKA" name="cancelMovement"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_szIhYGUfEeqRHftdgbhjKA" name="moveArm">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_wUjZsGUfEeqRHftdgbhjKA" name="movements" type="_zABMUGUdEeqRHftdgbhjKA"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xUt2MGUfEeqRHftdgbhjKA" name="checkHealthStatus"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ywNj0GUfEeqRHftdgbhjKA" name="communicateError">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_1tM5YGUfEeqRHftdgbhjKA" name="error">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_5G-RkGUfEeqRHftdgbhjKA" name="receiveOrder">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_7GR24GUfEeqRHftdgbhjKA" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_9WOgQGUfEeqRHftdgbhjKA" name="main"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BkwLoGUfEeqRHftdgbhjKA" name="MotorHandler">
+    <elementImport xmi:type="uml:ElementImport" xmi:id="_PRoLUGUfEeqRHftdgbhjKA" importedElement="_zABMUGUdEeqRHftdgbhjKA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_D1FPgGUfEeqRHftdgbhjKA" name="motors" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_E1fjoGUfEeqRHftdgbhjKA" value="4"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_E1mRUGUfEeqRHftdgbhjKA" value="4"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_I5Oe0GUfEeqRHftdgbhjKA" name="sendMovement">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_L0evAGUfEeqRHftdgbhjKA" name="movement" type="_zABMUGUdEeqRHftdgbhjKA"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_SZJ88GUfEeqRHftdgbhjKA" name="cancelMovement"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Tp7oUGUfEeqRHftdgbhjKA" name="checkMotorStatus">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Vp4G0GUfEeqRHftdgbhjKA" name="motor">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_qG7EwFNCEeqpnJZsrUAtSg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qG858FNCEeqpnJZsrUAtSg" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
