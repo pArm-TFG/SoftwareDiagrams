@@ -3476,6 +3476,10 @@
           <element xmi:type="uml:Operation" href="SWModel.uml#_4d_foGUXEeqRHftdgbhjKA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_4eRMcWUXEeqRHftdgbhjKA"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_MHr6cGg2Eeqv85vNtQLdaQ" type="Operation_ClassOperationLabel">
+          <element xmi:type="uml:Operation" href="SWModel.uml#_MGdLYGg2Eeqv85vNtQLdaQ"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_MHr6cWg2Eeqv85vNtQLdaQ"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_Tr4Y12UOEeqRHftdgbhjKA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_Tr4Y2GUOEeqRHftdgbhjKA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_Tr4Y2WUOEeqRHftdgbhjKA"/>

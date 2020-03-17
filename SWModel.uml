@@ -503,6 +503,17 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByteArray"/>
       </ownedParameter>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_MGdLYGg2Eeqv85vNtQLdaQ" name="sendMovementByAngles">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_a_KsEGg2Eeqv85vNtQLdaQ" name="t1">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_cLWLUGg2Eeqv85vNtQLdaQ" name="t2">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_eFvbcGg2Eeqv85vNtQLdaQ" name="t3">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+      </ownedParameter>
+    </ownedOperation>
     <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_xvdPQGUQEeqRHftdgbhjKA" name="ArmStatus">
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_8Ak5wGUQEeqRHftdgbhjKA" name="DISCONNECTED"/>
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_81pgkGUQEeqRHftdgbhjKA" name="WAITING"/>
