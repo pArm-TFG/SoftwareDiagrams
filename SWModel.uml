@@ -254,8 +254,8 @@
     <lifeline xmi:type="uml:Lifeline" xmi:id="_r08dkF5KEeqaCrdgLceo6Q" name="S2" coveredBy="_ua8PcF5KEeqaCrdgLceo6Q _BTEzEF5LEeqaCrdgLceo6Q _E-Co8F5LEeqaCrdgLceo6Q _YytGQF5LEeqaCrdgLceo6Q _exuM8F5MEeqaCrdgLceo6Q _exs-0F5MEeqaCrdgLceo6Q"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ua7oYF5KEeqaCrdgLceo6Q" name="Message3SendEvent" covered="_q_99YF5KEeqaCrdgLceo6Q" message="_ua6aQF5KEeqaCrdgLceo6Q"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ua8PcF5KEeqaCrdgLceo6Q" name="Message3ReceiveEvent" covered="_r08dkF5KEeqaCrdgLceo6Q" message="_ua6aQF5KEeqaCrdgLceo6Q"/>
-    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_eILgsF5MEeqaCrdgLceo6Q" name="ActionExecutionSpecification6" start="_ua8PcF5KEeqaCrdgLceo6Q"/>
     <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_exs-0F5MEeqaCrdgLceo6Q" name="ActionExecutionSpecification17" covered="_r08dkF5KEeqaCrdgLceo6Q" start="_ua8PcF5KEeqaCrdgLceo6Q"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_eILgsF5MEeqaCrdgLceo6Q" name="ActionExecutionSpecification6" start="_ua8PcF5KEeqaCrdgLceo6Q"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BTEzEF5LEeqaCrdgLceo6Q" name="Message11SendEvent" covered="_r08dkF5KEeqaCrdgLceo6Q" message="_BTDk8F5LEeqaCrdgLceo6Q"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BTFaIF5LEeqaCrdgLceo6Q" name="Message11ReceiveEvent" covered="_q_99YF5KEeqaCrdgLceo6Q" message="_BTDk8F5LEeqaCrdgLceo6Q"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_E-Co8F5LEeqaCrdgLceo6Q" name="Message11SendEvent" covered="_r08dkF5KEeqaCrdgLceo6Q" message="_E-CB4F5LEeqaCrdgLceo6Q"/>
@@ -654,17 +654,15 @@
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_SgO2UmUUEeqRHftdgbhjKA" name="mousecontrol" type="_Dn8zcGUUEeqRHftdgbhjKA" aggregation="composite" association="_SgOPQGUUEeqRHftdgbhjKA"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_3AMUI3J5EeqgPuUwqMUaDQ" name="informationscreen" type="_di83AHJ0EeqgPuUwqMUaDQ" aggregation="composite" association="_3AMUIHJ5EeqgPuUwqMUaDQ"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_Bdy7cHJ6EeqgPuUwqMUaDQ" name="informationScreen" type="_di83AHJ0EeqgPuUwqMUaDQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Bdy7cHJ6EeqgPuUwqMUaDQ" name="informationScreen" visibility="protected" type="_di83AHJ0EeqgPuUwqMUaDQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_XWMqwnJ9EeqgPuUwqMUaDQ" name="workingmode" type="_nFylkHJ8EeqgPuUwqMUaDQ" aggregation="composite" association="_XWMDsHJ9EeqgPuUwqMUaDQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_cqUPwHJ9EeqgPuUwqMUaDQ" name="workingMode" visibility="protected" type="_nFylkHJ8EeqgPuUwqMUaDQ"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_8oifYGUVEeqRHftdgbhjKA" name="create" isStatic="true">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_S0YPcGUWEeqRHftdgbhjKA" type="_WaT7sGUTEeqRHftdgbhjKA" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_Y1vcUGUTEeqRHftdgbhjKA" name="close"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_vwiHoGUUEeqRHftdgbhjKA" name="getPosition">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_07QgEGUUEeqRHftdgbhjKA" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4AP7EGUUEeqRHftdgbhjKA" value="3"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4AfysGUUEeqRHftdgbhjKA" value="3"/>
-        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_07QgEGUUEeqRHftdgbhjKA" type="_OjcqcHJ3EeqgPuUwqMUaDQ" direction="return"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_4Sy5EGUTEeqRHftdgbhjKA" name="Slider">
@@ -737,6 +735,14 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Realization" xmi:id="_SEQ7QHJ2EeqgPuUwqMUaDQ" client="_WaT7sGUTEeqRHftdgbhjKA" supplier="_wP6P8HJ1EeqgPuUwqMUaDQ"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_nFylkHJ8EeqgPuUwqMUaDQ" name="WorkingMode">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ti_SgHJ8EeqgPuUwqMUaDQ" name="value" type="_PAPFYHJ9EeqgPuUwqMUaDQ"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_YwVtgHJ9EeqgPuUwqMUaDQ" client="_nFylkHJ8EeqgPuUwqMUaDQ" supplier="_Sa4g8HJ1EeqgPuUwqMUaDQ" contract="_Sa4g8HJ1EeqgPuUwqMUaDQ"/>
+      <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_PAPFYHJ9EeqgPuUwqMUaDQ" name="WorkingModes">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ROFdAHJ9EeqgPuUwqMUaDQ" name="SLIDERS"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_R0D34HJ9EeqgPuUwqMUaDQ" name="MOUSE"/>
+      </nestedClassifier>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_QeBG8GUUEeqRHftdgbhjKA" memberEnd="_QeCVEGUUEeqRHftdgbhjKA _QeC8ImUUEeqRHftdgbhjKA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QeBuAGUUEeqRHftdgbhjKA" source="org.eclipse.papyrus">
@@ -909,6 +915,12 @@
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3AMUInJ5EeqgPuUwqMUaDQ" key="nature" value="UML_Nature"/>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_3AM7MnJ5EeqgPuUwqMUaDQ" name="window" type="_WaT7sGUTEeqRHftdgbhjKA" association="_3AMUIHJ5EeqgPuUwqMUaDQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_XWMDsHJ9EeqgPuUwqMUaDQ" memberEnd="_XWMqwnJ9EeqgPuUwqMUaDQ _XWMqxXJ9EeqgPuUwqMUaDQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XWMqwHJ9EeqgPuUwqMUaDQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XWMqwXJ9EeqgPuUwqMUaDQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_XWMqxXJ9EeqgPuUwqMUaDQ" name="window" type="_WaT7sGUTEeqRHftdgbhjKA" association="_XWMDsHJ9EeqgPuUwqMUaDQ"/>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_qG7EwFNCEeqpnJZsrUAtSg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qG858FNCEeqpnJZsrUAtSg" source="http://www.eclipse.org/uml2/2.0.0/UML">
