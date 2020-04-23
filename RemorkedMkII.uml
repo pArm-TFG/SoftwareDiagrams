@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Blocks" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.4/SysML#//blocks">
+  <uml:Model xmi:id="_wxm40IR-Eeq_DfsVRqIeog" name="RemorkedMkII">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_w2YrIIR-Eeq_DfsVRqIeog">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_w2nUoIR-Eeq_DfsVRqIeog">
+      <importedPackage xmi:type="uml:Package" href="pathmap://SysML14_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_XmL8wIR_EeqyoLukfulNrg" name="Architecture">
+      <packagedElement xmi:type="uml:Class" xmi:id="_VEz6QISBEeqyoLukfulNrg" name="MovementComputer">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_vszewIVAEeqBpqnOmjFoIw" name="matrices" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4iIgsIVAEeqBpqnOmjFoIw" value="*"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_5bvpQIVAEeqBpqnOmjFoIw" name="computeMovement">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-OC6oIVAEeqBpqnOmjFoIw" name="angleBase">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BXGWQIVBEeqBpqnOmjFoIw" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_D3sDsIVBEeqBpqnOmjFoIw" name="angleWrist">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_HsSWsIVBEeqBpqnOmjFoIw" type="_inLWQISFEeqyoLukfulNrg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_VP3TsISBEeqyoLukfulNrg" name="Orchestrator">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_8FnuMoVDEeqBpqnOmjFoIw" name="motorhandler" type="_Vb2hQISBEeqyoLukfulNrg" aggregation="composite" association="_8FnHIIVDEeqBpqnOmjFoIw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8FoVQIVDEeqBpqnOmjFoIw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8FoVQYVDEeqBpqnOmjFoIw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_BHu9MoVEEeqBpqnOmjFoIw" name="movementcomputer" type="_VEz6QISBEeqyoLukfulNrg" aggregation="composite" association="_BHuWIIVEEeqBpqnOmjFoIw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BHvkQIVEEeqBpqnOmjFoIw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BHvkQYVEEeqBpqnOmjFoIw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_BwoJMoVEEeqBpqnOmjFoIw" name="uart" type="_VnmeQISBEeqyoLukfulNrg" aggregation="composite" association="_BwniIIVEEeqBpqnOmjFoIw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BwowQIVEEeqBpqnOmjFoIw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BwowQYVEEeqBpqnOmjFoIw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ky7jcIVGEeqBpqnOmjFoIw" name="actualAngles" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yo5NsIVGEeqBpqnOmjFoIw" value="3"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yo_7YIVGEeqBpqnOmjFoIw" value="3"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_sF7z0IVCEeqBpqnOmjFoIw" name="receiveMovement"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_ugkqQIVCEeqBpqnOmjFoIw" name="cancelMovement"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_xhNwwIVCEeqBpqnOmjFoIw" name="moveArm">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_0rXYkIVCEeqBpqnOmjFoIw" name="movements" type="_inLWQISFEeqyoLukfulNrg"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_1cPb4IVCEeqBpqnOmjFoIw" name="checkHealthStatus"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_3f2SYIVCEeqBpqnOmjFoIw" name="communicateError">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_7Hix0IVCEeqBpqnOmjFoIw" name="error">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_7zLIwIVCEeqBpqnOmjFoIw" name="receiveOrder">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="__JngIIVCEeqBpqnOmjFoIw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_GhlzQIVDEeqBpqnOmjFoIw" name="main"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Vb2hQISBEeqyoLukfulNrg" name="MotorHandler">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ErlXIISDEeqyoLukfulNrg" name="motors" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IEksMISDEeqyoLukfulNrg" value="4"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IEvrUISDEeqyoLukfulNrg" value="4"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_JzRCoISDEeqyoLukfulNrg" name="sendMovement">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_u7dLUISFEeqyoLukfulNrg" name="movement" type="_inLWQISFEeqyoLukfulNrg"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hpxB0IVAEeqBpqnOmjFoIw" name="cancelMovement"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_islwwIVAEeqBpqnOmjFoIw" name="CheckMotorStatus">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_mpbZwIVAEeqBpqnOmjFoIw" name="motor">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_VnmeQISBEeqyoLukfulNrg" name="UART">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_cU9HEISBEeqyoLukfulNrg" name="baud" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_sh86IISBEeqyoLukfulNrg" name="init">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-LPsEISBEeqyoLukfulNrg" name="baudrate">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="__wt1EISBEeqyoLukfulNrg" name="sendMessage">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_FPnGsISCEeqyoLukfulNrg" name="msg">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_LhlbEISCEeqyoLukfulNrg" name="receiveByte">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_UAJi0ISCEeqyoLukfulNrg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByteArray"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_U7slEISCEeqyoLukfulNrg" name="setBaudrate">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_pptFMISCEeqyoLukfulNrg" name="baudrate">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedReception xmi:type="uml:Reception" xmi:id="_OmlVwISFEeqyoLukfulNrg" name="wakeOnReceive"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_inLWQISFEeqyoLukfulNrg" name="Movement">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_GiIhsISGEeqyoLukfulNrg" name="motor:Integer" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_LE0CsISGEeqyoLukfulNrg" name="direction" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EChar"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_RS-1IISGEeqyoLukfulNrg" name="expectedDuration" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_lKrz0ISQEeqyoLukfulNrg" name="actualDuration" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_wER_IISGEeqyoLukfulNrg" name="getMotor">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_U0YC0ISHEeqyoLukfulNrg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_XAgjMISHEeqyoLukfulNrg" name="getDirection">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_fhzO0ISHEeqyoLukfulNrg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EChar"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_g74nMISHEeqyoLukfulNrg" name="getExpectedDuration">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_n1_SkISHEeqyoLukfulNrg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_p45lgISHEeqyoLukfulNrg" name="setMotor">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BTmmUISREeqyoLukfulNrg" name="motor">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_C7S84ISREeqyoLukfulNrg" name="setDirection">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_JSRGAISREeqyoLukfulNrg" name="direction">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EChar"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_KHzm4ISREeqyoLukfulNrg" name="setExpectedDuration">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ujrv4ISREeqyoLukfulNrg" name="duration">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_pzhhwIVBEeqBpqnOmjFoIw" name="getActualDuration">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_wmK6QIVBEeqBpqnOmjFoIw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_yGwjQIVBEeqBpqnOmjFoIw" name="setActualDuration">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_5dk_0IVBEeqBpqnOmjFoIw" name="duration">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_8FnHIIVDEeqBpqnOmjFoIw" memberEnd="_8FnuMoVDEeqBpqnOmjFoIw _8FoVQoVDEeqBpqnOmjFoIw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8FnuMIVDEeqBpqnOmjFoIw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8FnuMYVDEeqBpqnOmjFoIw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_8FoVQoVDEeqBpqnOmjFoIw" name="orchestrator" type="_VP3TsISBEeqyoLukfulNrg" association="_8FnHIIVDEeqBpqnOmjFoIw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_BHuWIIVEEeqBpqnOmjFoIw" memberEnd="_BHu9MoVEEeqBpqnOmjFoIw _BHvkQoVEEeqBpqnOmjFoIw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BHu9MIVEEeqBpqnOmjFoIw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BHu9MYVEEeqBpqnOmjFoIw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_BHvkQoVEEeqBpqnOmjFoIw" name="orchestrator" type="_VP3TsISBEeqyoLukfulNrg" association="_BHuWIIVEEeqBpqnOmjFoIw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_BwniIIVEEeqBpqnOmjFoIw" memberEnd="_BwoJMoVEEeqBpqnOmjFoIw _BwowQoVEEeqBpqnOmjFoIw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BwoJMIVEEeqBpqnOmjFoIw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BwoJMYVEEeqBpqnOmjFoIw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_BwowQoVEEeqBpqnOmjFoIw" name="orchestrator" type="_VP3TsISBEeqyoLukfulNrg" association="_BwniIIVEEeqBpqnOmjFoIw"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_X1hZQIR_EeqyoLukfulNrg" name="Design">
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_8spDMIVJEeqBpqnOmjFoIw" name="S2UartInit">
+        <region xmi:type="uml:Region" xmi:id="_-RuKoIVJEeqBpqnOmjFoIw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_OMvc4IVKEeqBpqnOmjFoIw" name="setBaudrate" source="_FZ-mwIVKEeqBpqnOmjFoIw" target="_LP54UIVKEeqBpqnOmjFoIw"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_FZ-mwIVKEeqBpqnOmjFoIw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_LP54UIVKEeqBpqnOmjFoIw" name="State2"/>
+        </region>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_wy22AIR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wy5SQIR-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w11RgIR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w12foIR-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//activities"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Activities"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w2VAwIR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w2VAwYR-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//allocations"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Allocations"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w2Vn0IR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w2Vn0YR-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//blocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w2Vn0oR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w2Vn04R-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//constraintblocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ConstraintBlocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w2WO4IR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w2WO4YR-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//deprecatedelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_DeprecatedElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w2WO4oR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w2WO44R-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//modelelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ModelElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w2W18IR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w2W18YR-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//portsandflows"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Ports_u0026Flows"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w2W18oR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w2XdAIR-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Requirements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w2XdAYR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w2XdAoR-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <Blocks:Block xmi:id="_VFHcQISBEeqyoLukfulNrg" base_Class="_VEz6QISBEeqyoLukfulNrg"/>
+  <Blocks:Block xmi:id="_VP7lIISBEeqyoLukfulNrg" base_Class="_VP3TsISBEeqyoLukfulNrg"/>
+  <Blocks:Block xmi:id="_Vb7ZwISBEeqyoLukfulNrg" base_Class="_Vb2hQISBEeqyoLukfulNrg"/>
+  <Blocks:Block xmi:id="_VnqIoISBEeqyoLukfulNrg" base_Class="_VnmeQISBEeqyoLukfulNrg"/>
+  <Blocks:ValueType xmi:id="_inPnsISFEeqyoLukfulNrg" base_DataType="_inLWQISFEeqyoLukfulNrg"/>
+</xmi:XMI>
