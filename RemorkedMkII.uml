@@ -66,6 +66,7 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           </ownedParameter>
         </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_JQeqEIhyEeqxsKOY_R2Lzw" name="loop"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_Vb2hQISBEeqyoLukfulNrg" name="MotorHandler">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_ErlXIISDEeqyoLukfulNrg" name="motors" visibility="private">
@@ -82,6 +83,7 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedParameter>
         </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_KI_xAIhzEeqxsKOY_R2Lzw" name="init"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_VnmeQISBEeqyoLukfulNrg" name="UART">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_cU9HEISBEeqyoLukfulNrg" name="baud" visibility="private">
@@ -212,7 +214,7 @@ IFS0bits.U1RX = 0;</body>
           </subvertex>
         </region>
       </packagedElement>
-      <packagedElement xmi:type="uml:StateMachine" xmi:id="_T49ogIhuEeqxsKOY_R2Lzw" name="StateMachine2">
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_T49ogIhuEeqxsKOY_R2Lzw" name="S2OrchestratorMain">
         <region xmi:type="uml:Region" xmi:id="_V20cUIhuEeqxsKOY_R2Lzw" name="Region1">
           <transition xmi:type="uml:Transition" xmi:id="_x9X3UIhuEeqxsKOY_R2Lzw" source="_XV8FsIhuEeqxsKOY_R2Lzw" target="_uvMrIIhuEeqxsKOY_R2Lzw"/>
           <transition xmi:type="uml:Transition" xmi:id="_0OF8wIhuEeqxsKOY_R2Lzw" source="_uvMrIIhuEeqxsKOY_R2Lzw" target="_qbezMIhuEeqxsKOY_R2Lzw"/>
@@ -236,6 +238,14 @@ IFS0bits.U1RX = 0;</body>
               </specification>
             </ownedRule>
           </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_rSTwsIhyEeqxsKOY_R2Lzw" guard="_1HdQ4IhyEeqxsKOY_R2Lzw" source="_r1fLsIhxEeqxsKOY_R2Lzw" target="_r1fLsIhxEeqxsKOY_R2Lzw">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_1HdQ4IhyEeqxsKOY_R2Lzw">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_3Fyl0IhyEeqxsKOY_R2Lzw">
+                <language>C</language>
+                <body>if(1)</body>
+              </specification>
+            </ownedRule>
+          </transition>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_XV8FsIhuEeqxsKOY_R2Lzw" name="Initial1"/>
           <subvertex xmi:type="uml:State" xmi:id="_XuRtMIhuEeqxsKOY_R2Lzw" name="initMotorHandler"/>
           <subvertex xmi:type="uml:State" xmi:id="_qbezMIhuEeqxsKOY_R2Lzw" name="initUart"/>
@@ -251,6 +261,23 @@ handShakeSuccesfull = doHandShake();</body>
             </doActivity>
           </subvertex>
           <subvertex xmi:type="uml:State" xmi:id="_r1fLsIhxEeqxsKOY_R2Lzw" name="loop"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_bOmAAIhzEeqxsKOY_R2Lzw" name="S2OrchestatorDoHandShake">
+        <region xmi:type="uml:Region" xmi:id="_dto1UIhzEeqxsKOY_R2Lzw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_gBqGYIhzEeqxsKOY_R2Lzw" source="_enSaIIhzEeqxsKOY_R2Lzw" target="_fNI5MIhzEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_0eO4QIhzEeqxsKOY_R2Lzw" source="_fNI5MIhzEeqxsKOY_R2Lzw" target="_0HsnkIhzEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_57cH0IhzEeqxsKOY_R2Lzw" source="_0HsnkIhzEeqxsKOY_R2Lzw" target="_5iBiQIhzEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_DTeOMIh0EeqxsKOY_R2Lzw" source="_5iBiQIhzEeqxsKOY_R2Lzw" target="_C65WIIh0EeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_Lc3-QIh0EeqxsKOY_R2Lzw" source="_C65WIIh0EeqxsKOY_R2Lzw" target="_Kt8bsIh0EeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_LwpO0Ih0EeqxsKOY_R2Lzw" source="_C65WIIh0EeqxsKOY_R2Lzw" target="_LBd0oIh0EeqxsKOY_R2Lzw"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_enSaIIhzEeqxsKOY_R2Lzw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_fNI5MIhzEeqxsKOY_R2Lzw" name="receiveValue"/>
+          <subvertex xmi:type="uml:State" xmi:id="_0HsnkIhzEeqxsKOY_R2Lzw" name="operateValue"/>
+          <subvertex xmi:type="uml:State" xmi:id="_5iBiQIhzEeqxsKOY_R2Lzw" name="sendIdentifier"/>
+          <subvertex xmi:type="uml:State" xmi:id="_C65WIIh0EeqxsKOY_R2Lzw" name="receiveConfirmation"/>
+          <subvertex xmi:type="uml:State" xmi:id="_Kt8bsIh0EeqxsKOY_R2Lzw" name="State10"/>
+          <subvertex xmi:type="uml:State" xmi:id="_LBd0oIh0EeqxsKOY_R2Lzw" name="State11"/>
         </region>
       </packagedElement>
     </packagedElement>
