@@ -61,6 +61,11 @@
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_GhlzQIVDEeqBpqnOmjFoIw" name="main"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_NIrgIIhxEeqxsKOY_R2Lzw" name="doHandShake">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_X9u-IIhxEeqxsKOY_R2Lzw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_Vb2hQISBEeqyoLukfulNrg" name="MotorHandler">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_ErlXIISDEeqyoLukfulNrg" name="motors" visibility="private">
@@ -205,6 +210,47 @@ IFS0bits.U1RX = 0;</body>
 </body>
             </doActivity>
           </subvertex>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_T49ogIhuEeqxsKOY_R2Lzw" name="StateMachine2">
+        <region xmi:type="uml:Region" xmi:id="_V20cUIhuEeqxsKOY_R2Lzw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_x9X3UIhuEeqxsKOY_R2Lzw" source="_XV8FsIhuEeqxsKOY_R2Lzw" target="_uvMrIIhuEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_0OF8wIhuEeqxsKOY_R2Lzw" source="_uvMrIIhuEeqxsKOY_R2Lzw" target="_qbezMIhuEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_3QCDwIhuEeqxsKOY_R2Lzw" source="_qbezMIhuEeqxsKOY_R2Lzw" target="_XuRtMIhuEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_7yVxUIhuEeqxsKOY_R2Lzw" source="_XuRtMIhuEeqxsKOY_R2Lzw" target="_qvZ0wIhuEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_mvz9QIhvEeqxsKOY_R2Lzw" source="_qvZ0wIhuEeqxsKOY_R2Lzw" target="_l9mdMIhvEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_vHFxQIhvEeqxsKOY_R2Lzw" guard="_o_XvoIhwEeqxsKOY_R2Lzw" source="_l9mdMIhvEeqxsKOY_R2Lzw" target="_l9mdMIhvEeqxsKOY_R2Lzw">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_o_XvoIhwEeqxsKOY_R2Lzw">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_87kYUIhwEeqxsKOY_R2Lzw">
+                <language>C</language>
+                <body>if (!handShakeAnswered)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_AuLuUIhxEeqxsKOY_R2Lzw" source="_l9mdMIhvEeqxsKOY_R2Lzw" target="_GXIJQIhwEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_siD90IhxEeqxsKOY_R2Lzw" guard="_4RpKYIhxEeqxsKOY_R2Lzw" source="_GXIJQIhwEeqxsKOY_R2Lzw" target="_r1fLsIhxEeqxsKOY_R2Lzw">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_4RpKYIhxEeqxsKOY_R2Lzw">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_7fjQ0IhxEeqxsKOY_R2Lzw">
+                <language>C</language>
+                <body>if (handShakeSuccesfull)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_XV8FsIhuEeqxsKOY_R2Lzw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_XuRtMIhuEeqxsKOY_R2Lzw" name="initMotorHandler"/>
+          <subvertex xmi:type="uml:State" xmi:id="_qbezMIhuEeqxsKOY_R2Lzw" name="initUart"/>
+          <subvertex xmi:type="uml:State" xmi:id="_qvZ0wIhuEeqxsKOY_R2Lzw" name="initMovementComputer"/>
+          <subvertex xmi:type="uml:State" xmi:id="_uvMrIIhuEeqxsKOY_R2Lzw" name="checkHealthStatus"/>
+          <subvertex xmi:type="uml:State" xmi:id="_l9mdMIhvEeqxsKOY_R2Lzw" name="sendHandShakeRequest"/>
+          <subvertex xmi:type="uml:State" xmi:id="_GXIJQIhwEeqxsKOY_R2Lzw" name="doHandShake">
+            <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_c4fn8IhxEeqxsKOY_R2Lzw">
+              <language>C</language>
+              <body>boolean handShakeSuccesfull = False;&#xD;
+&#xD;
+handShakeSuccesfull = doHandShake();</body>
+            </doActivity>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_r1fLsIhxEeqxsKOY_R2Lzw" name="loop"/>
         </region>
       </packagedElement>
     </packagedElement>
