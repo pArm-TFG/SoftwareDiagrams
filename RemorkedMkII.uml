@@ -180,9 +180,31 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_X1hZQIR_EeqyoLukfulNrg" name="Design">
       <packagedElement xmi:type="uml:StateMachine" xmi:id="_8spDMIVJEeqBpqnOmjFoIw" name="S2UartInit">
         <region xmi:type="uml:Region" xmi:id="_-RuKoIVJEeqBpqnOmjFoIw" name="Region1">
-          <transition xmi:type="uml:Transition" xmi:id="_OMvc4IVKEeqBpqnOmjFoIw" name="setBaudrate" source="_FZ-mwIVKEeqBpqnOmjFoIw" target="_LP54UIVKEeqBpqnOmjFoIw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_OMvc4IVKEeqBpqnOmjFoIw" source="_FZ-mwIVKEeqBpqnOmjFoIw" target="_LP54UIVKEeqBpqnOmjFoIw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_n_mjcIhqEeqxsKOY_R2Lzw" source="_LP54UIVKEeqBpqnOmjFoIw" target="_dJUWYIhqEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_a-hA0IhsEeqxsKOY_R2Lzw" source="_dJUWYIhqEeqxsKOY_R2Lzw" target="_YvTXQIhsEeqxsKOY_R2Lzw"/>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_FZ-mwIVKEeqBpqnOmjFoIw" name="Initial1"/>
-          <subvertex xmi:type="uml:State" xmi:id="_LP54UIVKEeqBpqnOmjFoIw" name="State2"/>
+          <subvertex xmi:type="uml:State" xmi:id="_LP54UIVKEeqBpqnOmjFoIw" name="setBaudrate">
+            <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_ReWkEIhqEeqxsKOY_R2Lzw">
+              <language>C</language>
+              <body>int baudRate = 9600&#xD;
+//Aiuda  </body>
+            </doActivity>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_dJUWYIhqEeqxsKOY_R2Lzw" name="initUartInterupt">
+            <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_jGvhoIhrEeqxsKOY_R2Lzw">
+              <language>C</language>
+              <body>IEC0bits.U1RX = 1;&#xD;
+IFS0bits.U1RX = 0;</body>
+            </doActivity>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_YvTXQIhsEeqxsKOY_R2Lzw" name="InitReceptionBuffer">
+            <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_plOLgIhsEeqxsKOY_R2Lzw">
+              <language>C</language>
+              <body>byte *buffer = byte [4096]&#xD;
+</body>
+            </doActivity>
+          </subvertex>
         </region>
       </packagedElement>
     </packagedElement>
