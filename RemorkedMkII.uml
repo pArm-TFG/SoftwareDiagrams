@@ -25,26 +25,15 @@
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_HsSWsIVBEeqBpqnOmjFoIw" type="_inLWQISFEeqyoLukfulNrg" direction="return"/>
         </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_9M_VwI0hEeqmU_LaUIWIVA" name="init"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_VP3TsISBEeqyoLukfulNrg" name="Orchestrator">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_8FnuMoVDEeqBpqnOmjFoIw" name="motorhandler" type="_Vb2hQISBEeqyoLukfulNrg" aggregation="composite" association="_8FnHIIVDEeqBpqnOmjFoIw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8FoVQIVDEeqBpqnOmjFoIw"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8FoVQYVDEeqBpqnOmjFoIw" value="1"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_BHu9MoVEEeqBpqnOmjFoIw" name="movementcomputer" type="_VEz6QISBEeqyoLukfulNrg" aggregation="composite" association="_BHuWIIVEEeqBpqnOmjFoIw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BHvkQIVEEeqBpqnOmjFoIw"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BHvkQYVEEeqBpqnOmjFoIw" value="1"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_BwoJMoVEEeqBpqnOmjFoIw" name="uart" type="_VnmeQISBEeqyoLukfulNrg" aggregation="composite" association="_BwniIIVEEeqBpqnOmjFoIw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BwowQIVEEeqBpqnOmjFoIw"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BwowQYVEEeqBpqnOmjFoIw" value="1"/>
-        </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_ky7jcIVGEeqBpqnOmjFoIw" name="actualAngles" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yo5NsIVGEeqBpqnOmjFoIw" value="3"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yo_7YIVGEeqBpqnOmjFoIw" value="3"/>
         </ownedAttribute>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_sF7z0IVCEeqBpqnOmjFoIw" name="receiveMovement"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_sF7z0IVCEeqBpqnOmjFoIw" name="executeMovement"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_ugkqQIVCEeqBpqnOmjFoIw" name="cancelMovement"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_xhNwwIVCEeqBpqnOmjFoIw" name="moveArm">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_0rXYkIVCEeqBpqnOmjFoIw" name="movements" type="_inLWQISFEeqyoLukfulNrg"/>
@@ -55,7 +44,7 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_7zLIwIVCEeqBpqnOmjFoIw" name="receiveOrder">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_7zLIwIVCEeqBpqnOmjFoIw" name="executeOrder">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="__JngIIVCEeqBpqnOmjFoIw" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
           </ownedParameter>
@@ -67,6 +56,7 @@
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_JQeqEIhyEeqxsKOY_R2Lzw" name="loop"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Fht9QI3sEeqxqdjegVwiog" name="interpretBitStream"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_Vb2hQISBEeqyoLukfulNrg" name="MotorHandler">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_ErlXIISDEeqyoLukfulNrg" name="motors" visibility="private">
@@ -74,7 +64,7 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IEksMISDEeqyoLukfulNrg" value="4"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IEvrUISDEeqyoLukfulNrg" value="4"/>
         </ownedAttribute>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_JzRCoISDEeqyoLukfulNrg" name="sendMovement">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_JzRCoISDEeqyoLukfulNrg" name="sendMovementToMotors">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_u7dLUISFEeqyoLukfulNrg" name="movement" type="_inLWQISFEeqyoLukfulNrg"/>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_hpxB0IVAEeqBpqnOmjFoIw" name="cancelMovement"/>
@@ -165,24 +155,11 @@
           </ownedParameter>
         </ownedOperation>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_8FnHIIVDEeqBpqnOmjFoIw" memberEnd="_8FnuMoVDEeqBpqnOmjFoIw _8FoVQoVDEeqBpqnOmjFoIw">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8FnuMIVDEeqBpqnOmjFoIw" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8FnuMYVDEeqBpqnOmjFoIw" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_8FoVQoVDEeqBpqnOmjFoIw" name="orchestrator" type="_VP3TsISBEeqyoLukfulNrg" association="_8FnHIIVDEeqBpqnOmjFoIw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_BHuWIIVEEeqBpqnOmjFoIw" memberEnd="_BHu9MoVEEeqBpqnOmjFoIw _BHvkQoVEEeqBpqnOmjFoIw">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BHu9MIVEEeqBpqnOmjFoIw" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BHu9MYVEEeqBpqnOmjFoIw" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_BHvkQoVEEeqBpqnOmjFoIw" name="orchestrator" type="_VP3TsISBEeqyoLukfulNrg" association="_BHuWIIVEEeqBpqnOmjFoIw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_BwniIIVEEeqBpqnOmjFoIw" memberEnd="_BwoJMoVEEeqBpqnOmjFoIw _BwowQoVEEeqBpqnOmjFoIw">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BwoJMIVEEeqBpqnOmjFoIw" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BwoJMYVEEeqBpqnOmjFoIw" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_BwowQoVEEeqBpqnOmjFoIw" name="orchestrator" type="_VP3TsISBEeqyoLukfulNrg" association="_BwniIIVEEeqBpqnOmjFoIw"/>
-      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_g9tnII0iEeqmU_LaUIWIVA" name="Usa" client="_Vb2hQISBEeqyoLukfulNrg" supplier="_inLWQISFEeqyoLukfulNrg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_hjw6gI0iEeqmU_LaUIWIVA" name="Usa" client="_VEz6QISBEeqyoLukfulNrg" supplier="_inLWQISFEeqyoLukfulNrg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_iUE9II0iEeqmU_LaUIWIVA" name="Usa" client="_VP3TsISBEeqyoLukfulNrg" supplier="_VEz6QISBEeqyoLukfulNrg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_i7hXoI0iEeqmU_LaUIWIVA" name="Usa" client="_VP3TsISBEeqyoLukfulNrg" supplier="_Vb2hQISBEeqyoLukfulNrg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_kGk1gI0iEeqmU_LaUIWIVA" name="Usa" client="_VP3TsISBEeqyoLukfulNrg" supplier="_VnmeQISBEeqyoLukfulNrg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_X1hZQIR_EeqyoLukfulNrg" name="Design">
       <packagedElement xmi:type="uml:StateMachine" xmi:id="_8spDMIVJEeqBpqnOmjFoIw" name="S2UartInit">
@@ -229,12 +206,19 @@ IFS0bits.U1RX = 0;</body>
               </specification>
             </ownedRule>
           </transition>
-          <transition xmi:type="uml:Transition" xmi:id="_AuLuUIhxEeqxsKOY_R2Lzw" source="_l9mdMIhvEeqxsKOY_R2Lzw" target="_GXIJQIhwEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_AuLuUIhxEeqxsKOY_R2Lzw" guard="_psfXUI0xEeqAbJorTG9gLg" source="_l9mdMIhvEeqxsKOY_R2Lzw" target="_GXIJQIhwEeqxsKOY_R2Lzw">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_psfXUI0xEeqAbJorTG9gLg">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_psfXUY0xEeqAbJorTG9gLg">
+                <language>C</language>
+                <body>if(handShakeAnswered)</body>
+              </specification>
+            </ownedRule>
+          </transition>
           <transition xmi:type="uml:Transition" xmi:id="_siD90IhxEeqxsKOY_R2Lzw" guard="_4RpKYIhxEeqxsKOY_R2Lzw" source="_GXIJQIhwEeqxsKOY_R2Lzw" target="_r1fLsIhxEeqxsKOY_R2Lzw">
             <ownedRule xmi:type="uml:Constraint" xmi:id="_4RpKYIhxEeqxsKOY_R2Lzw">
               <specification xmi:type="uml:OpaqueExpression" xmi:id="_7fjQ0IhxEeqxsKOY_R2Lzw">
                 <language>C</language>
-                <body>if (handShakeSuccesfull)</body>
+                <body>if (handShakeSuccessfull)</body>
               </specification>
             </ownedRule>
           </transition>
@@ -246,6 +230,20 @@ IFS0bits.U1RX = 0;</body>
               </specification>
             </ownedRule>
           </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_YlaU4I0hEeqmU_LaUIWIVA" guard="_rz8mUI0hEeqmU_LaUIWIVA" source="_GXIJQIhwEeqxsKOY_R2Lzw" target="_l9mdMIhvEeqxsKOY_R2Lzw">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_rz8mUI0hEeqmU_LaUIWIVA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_rz8mUY0hEeqmU_LaUIWIVA">
+                <language>C</language>
+                <body>if(!handShakeSuccessfull)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_XC8CQI0xEeqAbJorTG9gLg" source="_uvMrIIhuEeqxsKOY_R2Lzw" target="_SaFn0I0xEeqAbJorTG9gLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_YbRHII0xEeqAbJorTG9gLg" source="_qbezMIhuEeqxsKOY_R2Lzw" target="_SaFn0I0xEeqAbJorTG9gLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_Y7thwI0xEeqAbJorTG9gLg" source="_XuRtMIhuEeqxsKOY_R2Lzw" target="_SaFn0I0xEeqAbJorTG9gLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_ZnMHsI0xEeqAbJorTG9gLg" source="_qvZ0wIhuEeqxsKOY_R2Lzw" target="_SaFn0I0xEeqAbJorTG9gLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_4LmFMI0xEeqAbJorTG9gLg" source="_GXIJQIhwEeqxsKOY_R2Lzw" target="_SaFn0I0xEeqAbJorTG9gLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_8va1sI0xEeqAbJorTG9gLg" source="_r1fLsIhxEeqxsKOY_R2Lzw" target="_SaFn0I0xEeqAbJorTG9gLg"/>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_XV8FsIhuEeqxsKOY_R2Lzw" name="Initial1"/>
           <subvertex xmi:type="uml:State" xmi:id="_XuRtMIhuEeqxsKOY_R2Lzw" name="initMotorHandler"/>
           <subvertex xmi:type="uml:State" xmi:id="_qbezMIhuEeqxsKOY_R2Lzw" name="initUart"/>
@@ -261,6 +259,7 @@ handShakeSuccesfull = doHandShake();</body>
             </doActivity>
           </subvertex>
           <subvertex xmi:type="uml:State" xmi:id="_r1fLsIhxEeqxsKOY_R2Lzw" name="loop"/>
+          <subvertex xmi:type="uml:State" xmi:id="_SaFn0I0xEeqAbJorTG9gLg" name="errorState"/>
         </region>
       </packagedElement>
       <packagedElement xmi:type="uml:StateMachine" xmi:id="_bOmAAIhzEeqxsKOY_R2Lzw" name="S2OrchestatorDoHandShake">
@@ -269,15 +268,112 @@ handShakeSuccesfull = doHandShake();</body>
           <transition xmi:type="uml:Transition" xmi:id="_0eO4QIhzEeqxsKOY_R2Lzw" source="_fNI5MIhzEeqxsKOY_R2Lzw" target="_0HsnkIhzEeqxsKOY_R2Lzw"/>
           <transition xmi:type="uml:Transition" xmi:id="_57cH0IhzEeqxsKOY_R2Lzw" source="_0HsnkIhzEeqxsKOY_R2Lzw" target="_5iBiQIhzEeqxsKOY_R2Lzw"/>
           <transition xmi:type="uml:Transition" xmi:id="_DTeOMIh0EeqxsKOY_R2Lzw" source="_5iBiQIhzEeqxsKOY_R2Lzw" target="_C65WIIh0EeqxsKOY_R2Lzw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_Lc3-QIh0EeqxsKOY_R2Lzw" source="_C65WIIh0EeqxsKOY_R2Lzw" target="_Kt8bsIh0EeqxsKOY_R2Lzw"/>
-          <transition xmi:type="uml:Transition" xmi:id="_LwpO0Ih0EeqxsKOY_R2Lzw" source="_C65WIIh0EeqxsKOY_R2Lzw" target="_LBd0oIh0EeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_Lc3-QIh0EeqxsKOY_R2Lzw" guard="_h9X_QI0gEeqmU_LaUIWIVA" source="_C65WIIh0EeqxsKOY_R2Lzw" target="_Kt8bsIh0EeqxsKOY_R2Lzw">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_h9X_QI0gEeqmU_LaUIWIVA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_h9X_QY0gEeqmU_LaUIWIVA">
+                <language>C</language>
+                <body>if(affirmativeResponse)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_LwpO0Ih0EeqxsKOY_R2Lzw" guard="_n7e8cI0gEeqmU_LaUIWIVA" source="_C65WIIh0EeqxsKOY_R2Lzw" target="_LBd0oIh0EeqxsKOY_R2Lzw">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_n7e8cI0gEeqmU_LaUIWIVA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_n7e8cY0gEeqmU_LaUIWIVA">
+                <language>C</language>
+                <body>if(!affirmativeResponse)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_iswvoI0yEeqAbJorTG9gLg" source="_fNI5MIhzEeqxsKOY_R2Lzw" target="_cZSmcI0yEeqAbJorTG9gLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_zRP1oI0yEeqAbJorTG9gLg" source="_5iBiQIhzEeqxsKOY_R2Lzw" target="_cZSmcI0yEeqAbJorTG9gLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_0-k6II0yEeqAbJorTG9gLg" source="_C65WIIh0EeqxsKOY_R2Lzw" target="_cZSmcI0yEeqAbJorTG9gLg"/>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_enSaIIhzEeqxsKOY_R2Lzw" name="Initial1"/>
           <subvertex xmi:type="uml:State" xmi:id="_fNI5MIhzEeqxsKOY_R2Lzw" name="receiveValue"/>
           <subvertex xmi:type="uml:State" xmi:id="_0HsnkIhzEeqxsKOY_R2Lzw" name="operateValue"/>
           <subvertex xmi:type="uml:State" xmi:id="_5iBiQIhzEeqxsKOY_R2Lzw" name="sendIdentifier"/>
-          <subvertex xmi:type="uml:State" xmi:id="_C65WIIh0EeqxsKOY_R2Lzw" name="receiveConfirmation"/>
-          <subvertex xmi:type="uml:State" xmi:id="_Kt8bsIh0EeqxsKOY_R2Lzw" name="State10"/>
-          <subvertex xmi:type="uml:State" xmi:id="_LBd0oIh0EeqxsKOY_R2Lzw" name="State11"/>
+          <subvertex xmi:type="uml:State" xmi:id="_C65WIIh0EeqxsKOY_R2Lzw" name="receiveResponse"/>
+          <subvertex xmi:type="uml:State" xmi:id="_Kt8bsIh0EeqxsKOY_R2Lzw" name="succesfullHandshake"/>
+          <subvertex xmi:type="uml:State" xmi:id="_LBd0oIh0EeqxsKOY_R2Lzw" name="unsuccessfullHandshake"/>
+          <subvertex xmi:type="uml:State" xmi:id="_cZSmcI0yEeqAbJorTG9gLg" name="errorState"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_-VZdYI0jEeqmU_LaUIWIVA" name="S2OrchestatorInterpretBitStream">
+        <region xmi:type="uml:Region" xmi:id="_DdZR8I0kEeqmU_LaUIWIVA" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_ORZnEI0kEeqmU_LaUIWIVA" source="_KDOWcI0kEeqmU_LaUIWIVA" target="_LItX0I0kEeqmU_LaUIWIVA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_QyqC4I0kEeqmU_LaUIWIVA" source="_LItX0I0kEeqmU_LaUIWIVA" target="_MG9v0I0kEeqmU_LaUIWIVA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_Xb9AMI0mEeqmU_LaUIWIVA" guard="_EqaBMI0wEeqAbJorTG9gLg" source="_MG9v0I0kEeqmU_LaUIWIVA" target="_XA5b4I0mEeqmU_LaUIWIVA">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_EqaBMI0wEeqAbJorTG9gLg">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_EqaBMY0wEeqAbJorTG9gLg">
+                <language>C</language>
+                <body>if(isMovment)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_YbTkYI0mEeqmU_LaUIWIVA" guard="_KAxB4I0wEeqAbJorTG9gLg" source="_MG9v0I0kEeqmU_LaUIWIVA" target="_WtOR8I0mEeqmU_LaUIWIVA">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_KAxB4I0wEeqAbJorTG9gLg">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_KAxB4Y0wEeqAbJorTG9gLg">
+                <language>C</language>
+                <body>if(!isMovement)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_8maBYI3mEeqxqdjegVwiog" source="_MG9v0I0kEeqmU_LaUIWIVA" target="_61LUUI3mEeqxqdjegVwiog"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_KDOWcI0kEeqmU_LaUIWIVA" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_LItX0I0kEeqmU_LaUIWIVA" name="readBuffer"/>
+          <subvertex xmi:type="uml:State" xmi:id="_MG9v0I0kEeqmU_LaUIWIVA" name="interpretBytes">
+            <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_iH8o0I0mEeqmU_LaUIWIVA">
+              <language>C</language>
+              <body>boolean isMovement;</body>
+            </doActivity>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_WtOR8I0mEeqmU_LaUIWIVA" name="executeOrder"/>
+          <subvertex xmi:type="uml:State" xmi:id="_XA5b4I0mEeqmU_LaUIWIVA" name="executeMovement"/>
+          <subvertex xmi:type="uml:State" xmi:id="_61LUUI3mEeqxqdjegVwiog" name="errorState"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_ZbTJEI3nEeqxqdjegVwiog" name="S2OrchestratorComunicateError">
+        <region xmi:type="uml:Region" xmi:id="_a0S8UI3nEeqxqdjegVwiog" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_zPanYI3nEeqxqdjegVwiog" source="_eXRT0I3nEeqxqdjegVwiog" target="_xvzOwI3nEeqxqdjegVwiog"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_eXRT0I3nEeqxqdjegVwiog" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_xvzOwI3nEeqxqdjegVwiog" name="sendError"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_jjzNoI3oEeqxqdjegVwiog" name="S2OrchestatorCheckHealthStatus">
+        <region xmi:type="uml:Region" xmi:id="_mCCxsI3oEeqxqdjegVwiog" name="Region1">
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_p7JxQI3oEeqxqdjegVwiog" name="Initial1"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_bNafkI3qEeqxqdjegVwiog" name="S2OrchestratorMoveArm">
+        <region xmi:type="uml:Region" xmi:id="_hm-psI3qEeqxqdjegVwiog" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_rOsx4I3qEeqxqdjegVwiog" source="_ny4yUI3qEeqxqdjegVwiog" target="_p0rq8I3qEeqxqdjegVwiog"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_ny4yUI3qEeqxqdjegVwiog" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_p0rq8I3qEeqxqdjegVwiog" name="sendMovementToMotors"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_jHIGcI3tEeqxqdjegVwiog" name="S2OrchestatorExecuteMovement">
+        <region xmi:type="uml:Region" xmi:id="_keI8sI3tEeqxqdjegVwiog" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_uN94AI3tEeqxqdjegVwiog" source="_mV8y4I3tEeqxqdjegVwiog" target="_mqVHcI3tEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1GqOII3tEeqxqdjegVwiog" source="_mqVHcI3tEeqxqdjegVwiog" target="_0xB8YI3tEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_MeEZcI3uEeqxqdjegVwiog" source="_0xB8YI3tEeqxqdjegVwiog" target="_MA1q4I3uEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_Qx9QgI3uEeqxqdjegVwiog" source="_MA1q4I3uEeqxqdjegVwiog" target="_QVev4I3uEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_a9MVcI3uEeqxqdjegVwiog" source="_mqVHcI3tEeqxqdjegVwiog" target="_TXSUAI3uEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_p2RCgI3uEeqxqdjegVwiog" source="_MA1q4I3uEeqxqdjegVwiog" target="_TXSUAI3uEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_ng204I3vEeqxqdjegVwiog" source="_QVev4I3uEeqxqdjegVwiog" target="_TXSUAI3uEeqxqdjegVwiog"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_mV8y4I3tEeqxqdjegVwiog" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_mqVHcI3tEeqxqdjegVwiog" name="decodeAngles"/>
+          <subvertex xmi:type="uml:State" xmi:id="_0xB8YI3tEeqxqdjegVwiog" name="calculateAnglesDiference"/>
+          <subvertex xmi:type="uml:State" xmi:id="_MA1q4I3uEeqxqdjegVwiog" name="computeMovement"/>
+          <subvertex xmi:type="uml:State" xmi:id="_QVev4I3uEeqxqdjegVwiog" name="moveArm"/>
+          <subvertex xmi:type="uml:State" xmi:id="_TXSUAI3uEeqxqdjegVwiog" name="errorState"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_P6ZEcI3wEeqxqdjegVwiog" name="S2OrchestratorExecuteOrder">
+        <region xmi:type="uml:Region" xmi:id="_RnopYI3wEeqxqdjegVwiog" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_72JdkI3wEeqxqdjegVwiog" source="_6sz28I3wEeqxqdjegVwiog" target="_6WxVgI3wEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_Vp6WkI3xEeqxqdjegVwiog" source="_6WxVgI3wEeqxqdjegVwiog" target="_U0GI4I3xEeqxqdjegVwiog"/>
+          <subvertex xmi:type="uml:State" xmi:id="_6WxVgI3wEeqxqdjegVwiog" name="decodeOrder"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_6sz28I3wEeqxqdjegVwiog" name="Initial2"/>
+          <subvertex xmi:type="uml:State" xmi:id="_U0GI4I3xEeqxqdjegVwiog" name="executeOrder"/>
         </region>
       </packagedElement>
     </packagedElement>
