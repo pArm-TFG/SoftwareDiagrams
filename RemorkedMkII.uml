@@ -114,46 +114,6 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_lKrz0ISQEeqyoLukfulNrg" name="actualDuration" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
         </ownedAttribute>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_wER_IISGEeqyoLukfulNrg" name="getMotor">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_U0YC0ISHEeqyoLukfulNrg" direction="return">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_XAgjMISHEeqyoLukfulNrg" name="getDirection">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_fhzO0ISHEeqyoLukfulNrg" direction="return">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EChar"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_g74nMISHEeqyoLukfulNrg" name="getExpectedDuration">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_n1_SkISHEeqyoLukfulNrg" direction="return">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_p45lgISHEeqyoLukfulNrg" name="setMotor">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BTmmUISREeqyoLukfulNrg" name="motor">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_C7S84ISREeqyoLukfulNrg" name="setDirection">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_JSRGAISREeqyoLukfulNrg" name="direction">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EChar"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_KHzm4ISREeqyoLukfulNrg" name="setExpectedDuration">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ujrv4ISREeqyoLukfulNrg" name="duration">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_pzhhwIVBEeqBpqnOmjFoIw" name="getActualDuration">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_wmK6QIVBEeqBpqnOmjFoIw" direction="return">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_yGwjQIVBEeqBpqnOmjFoIw" name="setActualDuration">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_5dk_0IVBEeqBpqnOmjFoIw" name="duration">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
-          </ownedParameter>
-        </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_g9tnII0iEeqmU_LaUIWIVA" name="Usa" client="_Vb2hQISBEeqyoLukfulNrg" supplier="_inLWQISFEeqyoLukfulNrg"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_hjw6gI0iEeqmU_LaUIWIVA" name="Usa" client="_VEz6QISBEeqyoLukfulNrg" supplier="_inLWQISFEeqyoLukfulNrg"/>
