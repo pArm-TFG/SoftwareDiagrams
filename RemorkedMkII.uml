@@ -23,7 +23,10 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_D3sDsIVBEeqBpqnOmjFoIw" name="angleWrist">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
           </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_HsSWsIVBEeqBpqnOmjFoIw" type="_inLWQISFEeqyoLukfulNrg" direction="return"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_HsSWsIVBEeqBpqnOmjFoIw" type="_inLWQISFEeqyoLukfulNrg" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BRlIIJKqEeqReq0XGXSSKw" value="4"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BRxVYJKqEeqReq0XGXSSKw" value="4"/>
+          </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_9M_VwI0hEeqmU_LaUIWIVA" name="init"/>
       </packagedElement>
@@ -36,7 +39,10 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_sF7z0IVCEeqBpqnOmjFoIw" name="executeMovement"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_ugkqQIVCEeqBpqnOmjFoIw" name="cancelMovement"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_xhNwwIVCEeqBpqnOmjFoIw" name="moveArm">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_0rXYkIVCEeqBpqnOmjFoIw" name="movements" type="_inLWQISFEeqyoLukfulNrg"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_0rXYkIVCEeqBpqnOmjFoIw" name="movements" type="_inLWQISFEeqyoLukfulNrg">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PgrrIJKqEeqReq0XGXSSKw" value="4"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Pg5GgJKqEeqReq0XGXSSKw" value="4"/>
+          </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_1cPb4IVCEeqBpqnOmjFoIw" name="checkMotorHealthStatus"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_3f2SYIVCEeqBpqnOmjFoIw" name="communicateError">
@@ -59,8 +65,7 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_Fht9QI3sEeqxqdjegVwiog" name="interpretBitStream"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_Vb2hQISBEeqyoLukfulNrg" name="MotorHandler">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_ErlXIISDEeqyoLukfulNrg" name="motors" visibility="private">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ErlXIISDEeqyoLukfulNrg" name="motors" visibility="private" type="_aAJ3gJKmEeqReq0XGXSSKw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IEksMISDEeqyoLukfulNrg" value="4"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IEvrUISDEeqyoLukfulNrg" value="4"/>
         </ownedAttribute>
@@ -68,7 +73,7 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_u7dLUISFEeqyoLukfulNrg" name="movement" type="_inLWQISFEeqyoLukfulNrg"/>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_hpxB0IVAEeqBpqnOmjFoIw" name="cancelMovement"/>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_islwwIVAEeqBpqnOmjFoIw" name="CheckMotorStatus">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_islwwIVAEeqBpqnOmjFoIw" name="checkMotorStatus">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_mpbZwIVAEeqBpqnOmjFoIw" name="motor">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedParameter>
@@ -89,7 +94,7 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_LhlbEISCEeqyoLukfulNrg" name="receiveByte">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_LhlbEISCEeqyoLukfulNrg" name="receiveBitStream">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_UAJi0ISCEeqyoLukfulNrg" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByteArray"/>
           </ownedParameter>
@@ -106,7 +111,7 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_LE0CsISGEeqyoLukfulNrg" name="direction" visibility="private">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EChar"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_RS-1IISGEeqyoLukfulNrg" name="expectedDuration" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
@@ -120,6 +125,27 @@
       <packagedElement xmi:type="uml:Dependency" xmi:id="_iUE9II0iEeqmU_LaUIWIVA" name="Usa" client="_VP3TsISBEeqyoLukfulNrg" supplier="_VEz6QISBEeqyoLukfulNrg"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_i7hXoI0iEeqmU_LaUIWIVA" name="Usa" client="_VP3TsISBEeqyoLukfulNrg" supplier="_Vb2hQISBEeqyoLukfulNrg"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_kGk1gI0iEeqmU_LaUIWIVA" name="Usa" client="_VP3TsISBEeqyoLukfulNrg" supplier="_VnmeQISBEeqyoLukfulNrg"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_aAJ3gJKmEeqReq0XGXSSKw" name="Motor">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_aAJ3gZKmEeqReq0XGXSSKw" name="motor:Integer" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_aAJ3gpKmEeqReq0XGXSSKw" name="direction" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EChar"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_aAJ3g5KmEeqReq0XGXSSKw" name="expectedDuration" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_aAJ3hJKmEeqReq0XGXSSKw" name="actualDuration" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_w5K2oJKmEeqReq0XGXSSKw" name="pin" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_LwVGUJKnEeqReq0XGXSSKw" name="ticks" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_lLAXoJKsEeqReq0XGXSSKw" name="Usa" client="_Vb2hQISBEeqyoLukfulNrg" supplier="_aAJ3gJKmEeqReq0XGXSSKw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_X1hZQIR_EeqyoLukfulNrg" name="Design">
       <packagedElement xmi:type="uml:StateMachine" xmi:id="_8spDMIVJEeqBpqnOmjFoIw" name="S2UartInit">
@@ -327,11 +353,10 @@ handShakeSuccesfull = doHandShake();</body>
           <subvertex xmi:type="uml:State" xmi:id="_43YcsJHdEeqTjsJ3phJl1g" name="checkFinalPosition">
             <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_5ssCIJHfEeqTjsJ3phJl1g">
               <language>C</language>
-              <body>bool finalPosition[3];&#xD;
-bool healthOk = True;&#xD;
+              <body>bool healthOk = True;&#xD;
 &#xD;
 for (i=0;i&lt;3 &amp;&amp; healthOk; i++){&#xD;
-	if(!finalPosition[i]){&#xD;
+	if(!checkIfFinalPosition[i]){&#xD;
 		healthOk = false;&#xD;
 	}&#xD;
 }</body>
@@ -411,9 +436,50 @@ for (i=0;i&lt;3 &amp;&amp; healthOk; i++){&#xD;
       <packagedElement xmi:type="uml:StateMachine" xmi:id="_7qSoMJHoEeqTjsJ3phJl1g" name="S2UartSendMessage">
         <region xmi:type="uml:Region" xmi:id="_mncEAJHpEeqTjsJ3phJl1g" name="Region1">
           <transition xmi:type="uml:Transition" xmi:id="_FecNYJHqEeqTjsJ3phJl1g" source="_CJ3eQJHqEeqTjsJ3phJl1g" target="_DQ4wsJHqEeqTjsJ3phJl1g"/>
+          <transition xmi:type="uml:Transition" xmi:id="_eCbMYJKhEeqReq0XGXSSKw" source="_DQ4wsJHqEeqTjsJ3phJl1g" target="_JdVE0JHqEeqTjsJ3phJl1g"/>
+          <transition xmi:type="uml:Transition" xmi:id="_sPjZcJKhEeqReq0XGXSSKw" source="_JdVE0JHqEeqTjsJ3phJl1g" target="_rC-RkJKhEeqReq0XGXSSKw"/>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_CJ3eQJHqEeqTjsJ3phJl1g" name="Initial1"/>
-          <subvertex xmi:type="uml:State" xmi:id="_DQ4wsJHqEeqTjsJ3phJl1g" name="State2"/>
-          <subvertex xmi:type="uml:State" xmi:id="_JdVE0JHqEeqTjsJ3phJl1g" name="State4"/>
+          <subvertex xmi:type="uml:State" xmi:id="_DQ4wsJHqEeqTjsJ3phJl1g" name="writeMessageInBuffer"/>
+          <subvertex xmi:type="uml:State" xmi:id="_JdVE0JHqEeqTjsJ3phJl1g" name="sendBufferContent"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_rC-RkJKhEeqReq0XGXSSKw" name="FinalState6"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_A-0d0JKiEeqReq0XGXSSKw" name="S2UartSetBaudrate">
+        <region xmi:type="uml:Region" xmi:id="_DcezEJKiEeqReq0XGXSSKw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_Ush-kJKiEeqReq0XGXSSKw" source="_PEf_EJKiEeqReq0XGXSSKw" target="_PdXLAJKiEeqReq0XGXSSKw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_VZ4MwJKiEeqReq0XGXSSKw" source="_PdXLAJKiEeqReq0XGXSSKw" target="_QIQiIJKiEeqReq0XGXSSKw"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_PEf_EJKiEeqReq0XGXSSKw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_PdXLAJKiEeqReq0XGXSSKw" name="setBaudrate"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_QIQiIJKiEeqReq0XGXSSKw" name="FinalState69"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_YuOSYJKiEeqReq0XGXSSKw" name="S2UartReceiveBitStream">
+        <region xmi:type="uml:Region" xmi:id="_aI12QJKiEeqReq0XGXSSKw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_VAZgUJKjEeqReq0XGXSSKw" source="_cWfZkJKiEeqReq0XGXSSKw" target="_c3cKgJKiEeqReq0XGXSSKw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_tnP6QJKjEeqReq0XGXSSKw" source="_c3cKgJKiEeqReq0XGXSSKw" target="_d4CE0JKiEeqReq0XGXSSKw"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_cWfZkJKiEeqReq0XGXSSKw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_c3cKgJKiEeqReq0XGXSSKw" name="saveToBuffer"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_d4CE0JKiEeqReq0XGXSSKw" name="FinalState3"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_ax-A4JKkEeqReq0XGXSSKw" name="S2MotorHandlerCheckMotorStatus">
+        <region xmi:type="uml:Region" xmi:id="_cThTMJKkEeqReq0XGXSSKw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_hLtxMJKkEeqReq0XGXSSKw" source="_falx0JKkEeqReq0XGXSSKw" target="_fuBEIJKkEeqReq0XGXSSKw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_hwl_4JKkEeqReq0XGXSSKw" source="_fuBEIJKkEeqReq0XGXSSKw" target="_gARRwJKkEeqReq0XGXSSKw"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_falx0JKkEeqReq0XGXSSKw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_fuBEIJKkEeqReq0XGXSSKw" name="checkIfFinalPosition"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_gARRwJKkEeqReq0XGXSSKw" name="FinalState3"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_DU-VgJKlEeqReq0XGXSSKw" name="S2MotorHandlerCancelMovement">
+        <region xmi:type="uml:Region" xmi:id="_E6wnkJKlEeqReq0XGXSSKw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_n_dgcJKlEeqReq0XGXSSKw" source="_HEAzEJKlEeqReq0XGXSSKw" target="_HVdIYJKlEeqReq0XGXSSKw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_ocmvcJKlEeqReq0XGXSSKw" source="_HVdIYJKlEeqReq0XGXSSKw" target="_TWZKsJKlEeqReq0XGXSSKw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_o3yPkJKlEeqReq0XGXSSKw" source="_TWZKsJKlEeqReq0XGXSSKw" target="_Hn8mkJKlEeqReq0XGXSSKw"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_HEAzEJKlEeqReq0XGXSSKw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_HVdIYJKlEeqReq0XGXSSKw" name="stopMotors"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_Hn8mkJKlEeqReq0XGXSSKw" name="FinalState3"/>
+          <subvertex xmi:type="uml:State" xmi:id="_TWZKsJKlEeqReq0XGXSSKw" name="saveActualTicks"/>
         </region>
       </packagedElement>
     </packagedElement>
@@ -489,4 +555,5 @@ for (i=0;i&lt;3 &amp;&amp; healthOk; i++){&#xD;
   <Blocks:Block xmi:id="_Vb7ZwISBEeqyoLukfulNrg" base_Class="_Vb2hQISBEeqyoLukfulNrg"/>
   <Blocks:Block xmi:id="_VnqIoISBEeqyoLukfulNrg" base_Class="_VnmeQISBEeqyoLukfulNrg"/>
   <Blocks:ValueType xmi:id="_inPnsISFEeqyoLukfulNrg" base_DataType="_inLWQISFEeqyoLukfulNrg"/>
+  <Blocks:ValueType xmi:id="_aAUPkJKmEeqReq0XGXSSKw" base_DataType="_aAJ3gJKmEeqReq0XGXSSKw"/>
 </xmi:XMI>
