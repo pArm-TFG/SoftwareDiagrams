@@ -482,6 +482,28 @@ for (i=0;i&lt;3 &amp;&amp; healthOk; i++){&#xD;
           <subvertex xmi:type="uml:State" xmi:id="_TWZKsJKlEeqReq0XGXSSKw" name="saveActualTicks"/>
         </region>
       </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_QDIWAJXNEeqFNr1aLTn-tw" name="S2MotorHandlerSendMovementToMotors">
+        <region xmi:type="uml:Region" xmi:id="_Rn57cJXNEeqFNr1aLTn-tw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_V_XD4JXNEeqFNr1aLTn-tw" source="_TLenAJXNEeqFNr1aLTn-tw" target="_UixKEJXNEeqFNr1aLTn-tw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_m4p8QJXNEeqFNr1aLTn-tw" source="_UixKEJXNEeqFNr1aLTn-tw" target="_kC5QEJXNEeqFNr1aLTn-tw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_nhLfYJXOEeqFNr1aLTn-tw" source="_kC5QEJXNEeqFNr1aLTn-tw" target="_mGtFcJXOEeqFNr1aLTn-tw"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_TLenAJXNEeqFNr1aLTn-tw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_UixKEJXNEeqFNr1aLTn-tw" name="generatePWM"/>
+          <subvertex xmi:type="uml:State" xmi:id="_kC5QEJXNEeqFNr1aLTn-tw" name="sendMovemetToMotor"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_mGtFcJXOEeqFNr1aLTn-tw" name="FinalState6"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_v1HrgJXOEeqFNr1aLTn-tw" name="S2MotorHandlerInit">
+        <region xmi:type="uml:Region" xmi:id="_whx9MJXOEeqFNr1aLTn-tw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_2g_GkJXOEeqFNr1aLTn-tw" source="_y39KYJXOEeqFNr1aLTn-tw" target="_0SQlMJXOEeqFNr1aLTn-tw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_5myZ4JXOEeqFNr1aLTn-tw" source="_0SQlMJXOEeqFNr1aLTn-tw" target="_4N9lwJXOEeqFNr1aLTn-tw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_8dBnMJXOEeqFNr1aLTn-tw" source="_4N9lwJXOEeqFNr1aLTn-tw" target="_7r0MsJXOEeqFNr1aLTn-tw"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_y39KYJXOEeqFNr1aLTn-tw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_0SQlMJXOEeqFNr1aLTn-tw" name="setupMotorFlags"/>
+          <subvertex xmi:type="uml:State" xmi:id="_4N9lwJXOEeqFNr1aLTn-tw" name="registerMotorPins"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_7r0MsJXOEeqFNr1aLTn-tw" name="FinalState6"/>
+        </region>
+      </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_wy22AIR-Eeq_DfsVRqIeog">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wy5SQIR-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
