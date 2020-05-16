@@ -13,7 +13,7 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4iIgsIVAEeqBpqnOmjFoIw" value="*"/>
         </ownedAttribute>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_5bvpQIVAEeqBpqnOmjFoIw" name="computeMovement">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_5bvpQIVAEeqBpqnOmjFoIw" name="computeAngleMovement">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_-OC6oIVAEeqBpqnOmjFoIw" name="angleBase">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
           </ownedParameter>
@@ -29,6 +29,18 @@
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_9M_VwI0hEeqmU_LaUIWIVA" name="init"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_72hAsJdWEeq0NoQ0WyDLVg" name="computeXYZMovement" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_DJ_1YJdXEeq0NoQ0WyDLVg" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_F98jsJdXEeq0NoQ0WyDLVg" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_HLPdQJdXEeq0NoQ0WyDLVg" name="z">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_M9YbAJdXEeq0NoQ0WyDLVg" type="_inLWQISFEeqyoLukfulNrg" direction="return"/>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_VP3TsISBEeqyoLukfulNrg" name="Orchestrator">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_ky7jcIVGEeqBpqnOmjFoIw" name="actualAngles" visibility="private">
@@ -502,6 +514,73 @@ for (i=0;i&lt;3 &amp;&amp; healthOk; i++){&#xD;
           <subvertex xmi:type="uml:State" xmi:id="_0SQlMJXOEeqFNr1aLTn-tw" name="setupMotorFlags"/>
           <subvertex xmi:type="uml:State" xmi:id="_4N9lwJXOEeqFNr1aLTn-tw" name="registerMotorPins"/>
           <subvertex xmi:type="uml:FinalState" xmi:id="_7r0MsJXOEeqFNr1aLTn-tw" name="FinalState6"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_Lvv_sJdWEeq0NoQ0WyDLVg" name="S2MovementComputerInit">
+        <region xmi:type="uml:Region" xmi:id="_MxOq0JdWEeq0NoQ0WyDLVg" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_Xamn0JdXEeq0NoQ0WyDLVg" source="_S3g3IJdXEeq0NoQ0WyDLVg" target="_VXrGwJdXEeq0NoQ0WyDLVg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_davlUJdXEeq0NoQ0WyDLVg" source="_VXrGwJdXEeq0NoQ0WyDLVg" target="_ctnZkJdXEeq0NoQ0WyDLVg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_hc3W8JdXEeq0NoQ0WyDLVg" source="_ctnZkJdXEeq0NoQ0WyDLVg" target="_gxT4gJdXEeq0NoQ0WyDLVg"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_S3g3IJdXEeq0NoQ0WyDLVg" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_VXrGwJdXEeq0NoQ0WyDLVg" name="setupMatrices"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ctnZkJdXEeq0NoQ0WyDLVg" name="setupEndEffectorLength"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_gxT4gJdXEeq0NoQ0WyDLVg" name="FinalState6"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_Nd1x0JdZEeq0NoQ0WyDLVg" name="S2MovementComputerComputeAngleMovement">
+        <region xmi:type="uml:Region" xmi:id="_PPptsJdZEeq0NoQ0WyDLVg" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_vmVhIJdZEeq0NoQ0WyDLVg" source="_sTpoYJdZEeq0NoQ0WyDLVg" target="_toy2YJdZEeq0NoQ0WyDLVg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_Qs55YJdaEeq0NoQ0WyDLVg" guard="_qpORcJdaEeq0NoQ0WyDLVg" source="_toy2YJdZEeq0NoQ0WyDLVg" target="_OVJ-4JdaEeq0NoQ0WyDLVg">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_qpORcJdaEeq0NoQ0WyDLVg">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_41sXMJdaEeq0NoQ0WyDLVg">
+                <language>C</language>
+                <body>if anglesInConstraint</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_UL3TkJdaEeq0NoQ0WyDLVg" source="_OVJ-4JdaEeq0NoQ0WyDLVg" target="_TQjh4JdaEeq0NoQ0WyDLVg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_YzeX4JdaEeq0NoQ0WyDLVg" guard="_-5ByoJdaEeq0NoQ0WyDLVg" source="_toy2YJdZEeq0NoQ0WyDLVg" target="_XGM9wJdaEeq0NoQ0WyDLVg">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_-5ByoJdaEeq0NoQ0WyDLVg">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_-5ByoZdaEeq0NoQ0WyDLVg">
+                <language>C</language>
+                <body>if !anglesInConstraints</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_sTpoYJdZEeq0NoQ0WyDLVg" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_toy2YJdZEeq0NoQ0WyDLVg" name="checkAnglesInConstraint"/>
+          <subvertex xmi:type="uml:State" xmi:id="_OVJ-4JdaEeq0NoQ0WyDLVg" name="generateMovementArray"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_TQjh4JdaEeq0NoQ0WyDLVg" name="FinalState6"/>
+          <subvertex xmi:type="uml:State" xmi:id="_XGM9wJdaEeq0NoQ0WyDLVg" name="errorState"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_GnYlcJdbEeq0NoQ0WyDLVg" name="S2MovementComputerComputeXYZMovement">
+        <region xmi:type="uml:Region" xmi:id="_IMkakJdbEeq0NoQ0WyDLVg" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_RYHkIJdbEeq0NoQ0WyDLVg" source="_KvQZwJdbEeq0NoQ0WyDLVg" target="_N5IUwJdbEeq0NoQ0WyDLVg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_YLYnsJdbEeq0NoQ0WyDLVg" guard="_n76hMJdbEeq0NoQ0WyDLVg" source="_N5IUwJdbEeq0NoQ0WyDLVg" target="_VmCWEJdbEeq0NoQ0WyDLVg">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_n76hMJdbEeq0NoQ0WyDLVg">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_n76hMZdbEeq0NoQ0WyDLVg">
+                <language>C</language>
+                <body>if xyzInConstraint</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_dbAHMJdbEeq0NoQ0WyDLVg" source="_VmCWEJdbEeq0NoQ0WyDLVg" target="_bRxJ0JdbEeq0NoQ0WyDLVg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_ggss0JdbEeq0NoQ0WyDLVg" source="_bRxJ0JdbEeq0NoQ0WyDLVg" target="_eedIQJdbEeq0NoQ0WyDLVg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_i79OUJdbEeq0NoQ0WyDLVg" guard="_sisfEJdbEeq0NoQ0WyDLVg" source="_N5IUwJdbEeq0NoQ0WyDLVg" target="_hHiDUJdbEeq0NoQ0WyDLVg">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_sisfEJdbEeq0NoQ0WyDLVg">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_sisfEZdbEeq0NoQ0WyDLVg">
+                <language>C</language>
+                <body>if !xyzInConstraint</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_KvQZwJdbEeq0NoQ0WyDLVg" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_N5IUwJdbEeq0NoQ0WyDLVg" name="checkXYZInConstraint"/>
+          <subvertex xmi:type="uml:State" xmi:id="_VmCWEJdbEeq0NoQ0WyDLVg" name="convertXYZToAngles"/>
+          <subvertex xmi:type="uml:State" xmi:id="_bRxJ0JdbEeq0NoQ0WyDLVg" name="computeAngleMovement"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_eedIQJdbEeq0NoQ0WyDLVg" name="FinalState8"/>
+          <subvertex xmi:type="uml:State" xmi:id="_hHiDUJdbEeq0NoQ0WyDLVg" name="errorState"/>
         </region>
       </packagedElement>
     </packagedElement>
