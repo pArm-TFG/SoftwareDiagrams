@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Blocks" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.4/SysML#//blocks">
+  <uml:Model xmi:id="_wxm40IR-Eeq_DfsVRqIeog" name="RemorkedMkII">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_w2YrIIR-Eeq_DfsVRqIeog">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_w2nUoIR-Eeq_DfsVRqIeog">
+      <importedPackage xmi:type="uml:Package" href="pathmap://SysML14_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_XmL8wIR_EeqyoLukfulNrg" name="Architecture">
+      <packagedElement xmi:type="uml:Class" xmi:id="_VEz6QISBEeqyoLukfulNrg" name="MovementComputer">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_vszewIVAEeqBpqnOmjFoIw" name="matrices" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4iIgsIVAEeqBpqnOmjFoIw" value="*"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_5bvpQIVAEeqBpqnOmjFoIw" name="computeAngleMovement">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-OC6oIVAEeqBpqnOmjFoIw" name="angleBase">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BXGWQIVBEeqBpqnOmjFoIw" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_D3sDsIVBEeqBpqnOmjFoIw" name="angleWrist">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_HsSWsIVBEeqBpqnOmjFoIw" type="_inLWQISFEeqyoLukfulNrg" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BRlIIJKqEeqReq0XGXSSKw" value="4"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BRxVYJKqEeqReq0XGXSSKw" value="4"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_9M_VwI0hEeqmU_LaUIWIVA" name="init"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_72hAsJdWEeq0NoQ0WyDLVg" name="computeXYZMovement" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_DJ_1YJdXEeq0NoQ0WyDLVg" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_F98jsJdXEeq0NoQ0WyDLVg" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_HLPdQJdXEeq0NoQ0WyDLVg" name="z">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_M9YbAJdXEeq0NoQ0WyDLVg" type="_inLWQISFEeqyoLukfulNrg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_VP3TsISBEeqyoLukfulNrg" name="Orchestrator">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ky7jcIVGEeqBpqnOmjFoIw" name="actualAngles" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yo5NsIVGEeqBpqnOmjFoIw" value="3"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yo_7YIVGEeqBpqnOmjFoIw" value="3"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_sF7z0IVCEeqBpqnOmjFoIw" name="executeMovement"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_ugkqQIVCEeqBpqnOmjFoIw" name="cancelMovement"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_xhNwwIVCEeqBpqnOmjFoIw" name="moveArm">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_0rXYkIVCEeqBpqnOmjFoIw" name="movements" type="_inLWQISFEeqyoLukfulNrg">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PgrrIJKqEeqReq0XGXSSKw" value="4"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Pg5GgJKqEeqReq0XGXSSKw" value="4"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_1cPb4IVCEeqBpqnOmjFoIw" name="checkMotorHealthStatus"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_3f2SYIVCEeqBpqnOmjFoIw" name="communicateError">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_7Hix0IVCEeqBpqnOmjFoIw" name="error">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_7zLIwIVCEeqBpqnOmjFoIw" name="executeOrder">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="__JngIIVCEeqBpqnOmjFoIw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_GhlzQIVDEeqBpqnOmjFoIw" name="main"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_NIrgIIhxEeqxsKOY_R2Lzw" name="doHandShake">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_X9u-IIhxEeqxsKOY_R2Lzw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_JQeqEIhyEeqxsKOY_R2Lzw" name="loop"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Fht9QI3sEeqxqdjegVwiog" name="interpretBitStream"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Vb2hQISBEeqyoLukfulNrg" name="MotorHandler">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ErlXIISDEeqyoLukfulNrg" name="motors" visibility="private" type="_aAJ3gJKmEeqReq0XGXSSKw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IEksMISDEeqyoLukfulNrg" value="4"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IEvrUISDEeqyoLukfulNrg" value="4"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_JzRCoISDEeqyoLukfulNrg" name="sendMovementToMotors">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_u7dLUISFEeqyoLukfulNrg" name="movement" type="_inLWQISFEeqyoLukfulNrg"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hpxB0IVAEeqBpqnOmjFoIw" name="cancelMovement"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_islwwIVAEeqBpqnOmjFoIw" name="checkMotorStatus">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_mpbZwIVAEeqBpqnOmjFoIw" name="motor">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_KI_xAIhzEeqxsKOY_R2Lzw" name="init"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_VnmeQISBEeqyoLukfulNrg" name="UART">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_cU9HEISBEeqyoLukfulNrg" name="baud" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_sh86IISBEeqyoLukfulNrg" name="init">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-LPsEISBEeqyoLukfulNrg" name="baudrate">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="__wt1EISBEeqyoLukfulNrg" name="sendMessage">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_FPnGsISCEeqyoLukfulNrg" name="msg">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_LhlbEISCEeqyoLukfulNrg" name="receiveBitStream">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_UAJi0ISCEeqyoLukfulNrg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByteArray"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_U7slEISCEeqyoLukfulNrg" name="setBaudrate">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_pptFMISCEeqyoLukfulNrg" name="baudrate">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedReception xmi:type="uml:Reception" xmi:id="_OmlVwISFEeqyoLukfulNrg" name="wakeOnReceive"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_inLWQISFEeqyoLukfulNrg" name="Movement">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_GiIhsISGEeqyoLukfulNrg" name="motor:Integer" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_LE0CsISGEeqyoLukfulNrg" name="direction" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_RS-1IISGEeqyoLukfulNrg" name="expectedDuration" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_lKrz0ISQEeqyoLukfulNrg" name="actualDuration" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_g9tnII0iEeqmU_LaUIWIVA" name="Usa" client="_Vb2hQISBEeqyoLukfulNrg" supplier="_inLWQISFEeqyoLukfulNrg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_hjw6gI0iEeqmU_LaUIWIVA" name="Usa" client="_VEz6QISBEeqyoLukfulNrg" supplier="_inLWQISFEeqyoLukfulNrg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_iUE9II0iEeqmU_LaUIWIVA" name="Usa" client="_VP3TsISBEeqyoLukfulNrg" supplier="_VEz6QISBEeqyoLukfulNrg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_i7hXoI0iEeqmU_LaUIWIVA" name="Usa" client="_VP3TsISBEeqyoLukfulNrg" supplier="_Vb2hQISBEeqyoLukfulNrg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_kGk1gI0iEeqmU_LaUIWIVA" name="Usa" client="_VP3TsISBEeqyoLukfulNrg" supplier="_VnmeQISBEeqyoLukfulNrg"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_aAJ3gJKmEeqReq0XGXSSKw" name="Motor">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_aAJ3gZKmEeqReq0XGXSSKw" name="motor:Integer" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_aAJ3gpKmEeqReq0XGXSSKw" name="direction" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EChar"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_aAJ3g5KmEeqReq0XGXSSKw" name="expectedDuration" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_aAJ3hJKmEeqReq0XGXSSKw" name="actualDuration" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_w5K2oJKmEeqReq0XGXSSKw" name="pin" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_LwVGUJKnEeqReq0XGXSSKw" name="ticks" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_lLAXoJKsEeqReq0XGXSSKw" name="Usa" client="_Vb2hQISBEeqyoLukfulNrg" supplier="_aAJ3gJKmEeqReq0XGXSSKw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_X1hZQIR_EeqyoLukfulNrg" name="Design">
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_8spDMIVJEeqBpqnOmjFoIw" name="S2UartInit">
+        <region xmi:type="uml:Region" xmi:id="_-RuKoIVJEeqBpqnOmjFoIw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_OMvc4IVKEeqBpqnOmjFoIw" source="_FZ-mwIVKEeqBpqnOmjFoIw" target="_LP54UIVKEeqBpqnOmjFoIw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_n_mjcIhqEeqxsKOY_R2Lzw" source="_LP54UIVKEeqBpqnOmjFoIw" target="_dJUWYIhqEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_a-hA0IhsEeqxsKOY_R2Lzw" source="_dJUWYIhqEeqxsKOY_R2Lzw" target="_YvTXQIhsEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_qR9DYJHoEeqTjsJ3phJl1g" source="_YvTXQIhsEeqxsKOY_R2Lzw" target="_pow8cJHoEeqTjsJ3phJl1g"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_FZ-mwIVKEeqBpqnOmjFoIw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_LP54UIVKEeqBpqnOmjFoIw" name="setBaudrate">
+            <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_ReWkEIhqEeqxsKOY_R2Lzw">
+              <language>C</language>
+              <body>int baudRate = 9600&#xD;
+</body>
+            </doActivity>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_dJUWYIhqEeqxsKOY_R2Lzw" name="initUartInterupt">
+            <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_jGvhoIhrEeqxsKOY_R2Lzw">
+              <language>C</language>
+              <body>IEC0bits.U1RX = 1;&#xD;
+IFS0bits.U1RX = 0;</body>
+            </doActivity>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_YvTXQIhsEeqxsKOY_R2Lzw" name="InitReceptionBuffer">
+            <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_plOLgIhsEeqxsKOY_R2Lzw">
+              <language>C</language>
+              <body>byte *buffer = byte [4096]&#xD;
+</body>
+            </doActivity>
+          </subvertex>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_pow8cJHoEeqTjsJ3phJl1g" name="FinalState8"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_T49ogIhuEeqxsKOY_R2Lzw" name="S2OrchestratorMain">
+        <region xmi:type="uml:Region" xmi:id="_V20cUIhuEeqxsKOY_R2Lzw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_x9X3UIhuEeqxsKOY_R2Lzw" source="_XV8FsIhuEeqxsKOY_R2Lzw" target="_uvMrIIhuEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_0OF8wIhuEeqxsKOY_R2Lzw" source="_uvMrIIhuEeqxsKOY_R2Lzw" target="_qbezMIhuEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_3QCDwIhuEeqxsKOY_R2Lzw" source="_qbezMIhuEeqxsKOY_R2Lzw" target="_XuRtMIhuEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_7yVxUIhuEeqxsKOY_R2Lzw" source="_XuRtMIhuEeqxsKOY_R2Lzw" target="_qvZ0wIhuEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_mvz9QIhvEeqxsKOY_R2Lzw" source="_qvZ0wIhuEeqxsKOY_R2Lzw" target="_l9mdMIhvEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_vHFxQIhvEeqxsKOY_R2Lzw" guard="_o_XvoIhwEeqxsKOY_R2Lzw" source="_l9mdMIhvEeqxsKOY_R2Lzw" target="_l9mdMIhvEeqxsKOY_R2Lzw">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_o_XvoIhwEeqxsKOY_R2Lzw">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_87kYUIhwEeqxsKOY_R2Lzw">
+                <language>C</language>
+                <body>if (!handShakeAnswered)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_AuLuUIhxEeqxsKOY_R2Lzw" guard="_psfXUI0xEeqAbJorTG9gLg" source="_l9mdMIhvEeqxsKOY_R2Lzw" target="_GXIJQIhwEeqxsKOY_R2Lzw">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_psfXUI0xEeqAbJorTG9gLg">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_psfXUY0xEeqAbJorTG9gLg">
+                <language>C</language>
+                <body>if(handShakeAnswered)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_siD90IhxEeqxsKOY_R2Lzw" guard="_4RpKYIhxEeqxsKOY_R2Lzw" source="_GXIJQIhwEeqxsKOY_R2Lzw" target="_r1fLsIhxEeqxsKOY_R2Lzw">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_4RpKYIhxEeqxsKOY_R2Lzw">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_7fjQ0IhxEeqxsKOY_R2Lzw">
+                <language>C</language>
+                <body>if (handShakeSuccessfull)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_rSTwsIhyEeqxsKOY_R2Lzw" guard="_1HdQ4IhyEeqxsKOY_R2Lzw" source="_r1fLsIhxEeqxsKOY_R2Lzw" target="_r1fLsIhxEeqxsKOY_R2Lzw">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_1HdQ4IhyEeqxsKOY_R2Lzw">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_3Fyl0IhyEeqxsKOY_R2Lzw">
+                <language>C</language>
+                <body>if(1)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_YlaU4I0hEeqmU_LaUIWIVA" guard="_rz8mUI0hEeqmU_LaUIWIVA" source="_GXIJQIhwEeqxsKOY_R2Lzw" target="_l9mdMIhvEeqxsKOY_R2Lzw">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_rz8mUI0hEeqmU_LaUIWIVA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_rz8mUY0hEeqmU_LaUIWIVA">
+                <language>C</language>
+                <body>if(!handShakeSuccessfull)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_XC8CQI0xEeqAbJorTG9gLg" source="_uvMrIIhuEeqxsKOY_R2Lzw" target="_SaFn0I0xEeqAbJorTG9gLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_YbRHII0xEeqAbJorTG9gLg" source="_qbezMIhuEeqxsKOY_R2Lzw" target="_SaFn0I0xEeqAbJorTG9gLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_Y7thwI0xEeqAbJorTG9gLg" source="_XuRtMIhuEeqxsKOY_R2Lzw" target="_SaFn0I0xEeqAbJorTG9gLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_ZnMHsI0xEeqAbJorTG9gLg" source="_qvZ0wIhuEeqxsKOY_R2Lzw" target="_SaFn0I0xEeqAbJorTG9gLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_4LmFMI0xEeqAbJorTG9gLg" source="_GXIJQIhwEeqxsKOY_R2Lzw" target="_SaFn0I0xEeqAbJorTG9gLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_8va1sI0xEeqAbJorTG9gLg" source="_r1fLsIhxEeqxsKOY_R2Lzw" target="_SaFn0I0xEeqAbJorTG9gLg"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_XV8FsIhuEeqxsKOY_R2Lzw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_XuRtMIhuEeqxsKOY_R2Lzw" name="initMotorHandler"/>
+          <subvertex xmi:type="uml:State" xmi:id="_qbezMIhuEeqxsKOY_R2Lzw" name="initUart"/>
+          <subvertex xmi:type="uml:State" xmi:id="_qvZ0wIhuEeqxsKOY_R2Lzw" name="initMovementComputer"/>
+          <subvertex xmi:type="uml:State" xmi:id="_uvMrIIhuEeqxsKOY_R2Lzw" name="checkHealthStatus"/>
+          <subvertex xmi:type="uml:State" xmi:id="_l9mdMIhvEeqxsKOY_R2Lzw" name="sendHandShakeRequest"/>
+          <subvertex xmi:type="uml:State" xmi:id="_GXIJQIhwEeqxsKOY_R2Lzw" name="doHandShake">
+            <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_c4fn8IhxEeqxsKOY_R2Lzw">
+              <language>C</language>
+              <body>boolean handShakeSuccesfull = False;&#xD;
+&#xD;
+handShakeSuccesfull = doHandShake();</body>
+            </doActivity>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_r1fLsIhxEeqxsKOY_R2Lzw" name="loop"/>
+          <subvertex xmi:type="uml:State" xmi:id="_SaFn0I0xEeqAbJorTG9gLg" name="errorState"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_bOmAAIhzEeqxsKOY_R2Lzw" name="S2OrchestatorDoHandShake">
+        <region xmi:type="uml:Region" xmi:id="_dto1UIhzEeqxsKOY_R2Lzw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_gBqGYIhzEeqxsKOY_R2Lzw" source="_enSaIIhzEeqxsKOY_R2Lzw" target="_fNI5MIhzEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_0eO4QIhzEeqxsKOY_R2Lzw" source="_fNI5MIhzEeqxsKOY_R2Lzw" target="_0HsnkIhzEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_57cH0IhzEeqxsKOY_R2Lzw" source="_0HsnkIhzEeqxsKOY_R2Lzw" target="_5iBiQIhzEeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_DTeOMIh0EeqxsKOY_R2Lzw" source="_5iBiQIhzEeqxsKOY_R2Lzw" target="_C65WIIh0EeqxsKOY_R2Lzw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_Lc3-QIh0EeqxsKOY_R2Lzw" guard="_h9X_QI0gEeqmU_LaUIWIVA" source="_C65WIIh0EeqxsKOY_R2Lzw" target="_Kt8bsIh0EeqxsKOY_R2Lzw">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_h9X_QI0gEeqmU_LaUIWIVA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_h9X_QY0gEeqmU_LaUIWIVA">
+                <language>C</language>
+                <body>if(affirmativeResponse)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_LwpO0Ih0EeqxsKOY_R2Lzw" guard="_n7e8cI0gEeqmU_LaUIWIVA" source="_C65WIIh0EeqxsKOY_R2Lzw" target="_LBd0oIh0EeqxsKOY_R2Lzw">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_n7e8cI0gEeqmU_LaUIWIVA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_n7e8cY0gEeqmU_LaUIWIVA">
+                <language>C</language>
+                <body>if(!affirmativeResponse)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_iswvoI0yEeqAbJorTG9gLg" source="_fNI5MIhzEeqxsKOY_R2Lzw" target="_cZSmcI0yEeqAbJorTG9gLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_zRP1oI0yEeqAbJorTG9gLg" source="_5iBiQIhzEeqxsKOY_R2Lzw" target="_cZSmcI0yEeqAbJorTG9gLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_0-k6II0yEeqAbJorTG9gLg" source="_C65WIIh0EeqxsKOY_R2Lzw" target="_cZSmcI0yEeqAbJorTG9gLg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_ZSz8UJHVEeqTjsJ3phJl1g" source="_Kt8bsIh0EeqxsKOY_R2Lzw" target="_YAdjoJHVEeqTjsJ3phJl1g"/>
+          <transition xmi:type="uml:Transition" xmi:id="_bIbaIJHVEeqTjsJ3phJl1g" source="_LBd0oIh0EeqxsKOY_R2Lzw" target="_YAdjoJHVEeqTjsJ3phJl1g"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_enSaIIhzEeqxsKOY_R2Lzw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_fNI5MIhzEeqxsKOY_R2Lzw" name="receiveValue"/>
+          <subvertex xmi:type="uml:State" xmi:id="_0HsnkIhzEeqxsKOY_R2Lzw" name="operateValue"/>
+          <subvertex xmi:type="uml:State" xmi:id="_5iBiQIhzEeqxsKOY_R2Lzw" name="sendIdentifier"/>
+          <subvertex xmi:type="uml:State" xmi:id="_C65WIIh0EeqxsKOY_R2Lzw" name="receiveResponse"/>
+          <subvertex xmi:type="uml:State" xmi:id="_Kt8bsIh0EeqxsKOY_R2Lzw" name="succesfullHandshake"/>
+          <subvertex xmi:type="uml:State" xmi:id="_LBd0oIh0EeqxsKOY_R2Lzw" name="unsuccessfullHandshake"/>
+          <subvertex xmi:type="uml:State" xmi:id="_cZSmcI0yEeqAbJorTG9gLg" name="errorState"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_YAdjoJHVEeqTjsJ3phJl1g" name="FinalState18"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_-VZdYI0jEeqmU_LaUIWIVA" name="S2OrchestatorInterpretBitStream">
+        <region xmi:type="uml:Region" xmi:id="_DdZR8I0kEeqmU_LaUIWIVA" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_ORZnEI0kEeqmU_LaUIWIVA" source="_KDOWcI0kEeqmU_LaUIWIVA" target="_LItX0I0kEeqmU_LaUIWIVA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_QyqC4I0kEeqmU_LaUIWIVA" source="_LItX0I0kEeqmU_LaUIWIVA" target="_MG9v0I0kEeqmU_LaUIWIVA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_Xb9AMI0mEeqmU_LaUIWIVA" guard="_EqaBMI0wEeqAbJorTG9gLg" source="_MG9v0I0kEeqmU_LaUIWIVA" target="_XA5b4I0mEeqmU_LaUIWIVA">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_EqaBMI0wEeqAbJorTG9gLg">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_EqaBMY0wEeqAbJorTG9gLg">
+                <language>C</language>
+                <body>if(isMovment)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_YbTkYI0mEeqmU_LaUIWIVA" guard="_KAxB4I0wEeqAbJorTG9gLg" source="_MG9v0I0kEeqmU_LaUIWIVA" target="_WtOR8I0mEeqmU_LaUIWIVA">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_KAxB4I0wEeqAbJorTG9gLg">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_KAxB4Y0wEeqAbJorTG9gLg">
+                <language>C</language>
+                <body>if(!isMovement)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_8maBYI3mEeqxqdjegVwiog" source="_MG9v0I0kEeqmU_LaUIWIVA" target="_61LUUI3mEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_h5JgAJHVEeqTjsJ3phJl1g" source="_XA5b4I0mEeqmU_LaUIWIVA" target="_fpJMQJHVEeqTjsJ3phJl1g"/>
+          <transition xmi:type="uml:Transition" xmi:id="_igiQIJHVEeqTjsJ3phJl1g" source="_WtOR8I0mEeqmU_LaUIWIVA" target="_fpJMQJHVEeqTjsJ3phJl1g"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_KDOWcI0kEeqmU_LaUIWIVA" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_LItX0I0kEeqmU_LaUIWIVA" name="readBuffer"/>
+          <subvertex xmi:type="uml:State" xmi:id="_MG9v0I0kEeqmU_LaUIWIVA" name="interpretBytes">
+            <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_iH8o0I0mEeqmU_LaUIWIVA">
+              <language>C</language>
+              <body>boolean isMovement;</body>
+            </doActivity>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_WtOR8I0mEeqmU_LaUIWIVA" name="executeOrder"/>
+          <subvertex xmi:type="uml:State" xmi:id="_XA5b4I0mEeqmU_LaUIWIVA" name="executeMovement"/>
+          <subvertex xmi:type="uml:State" xmi:id="_61LUUI3mEeqxqdjegVwiog" name="errorState"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_fpJMQJHVEeqTjsJ3phJl1g" name="FinalState12"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_ZbTJEI3nEeqxqdjegVwiog" name="S2OrchestratorComunicateError">
+        <region xmi:type="uml:Region" xmi:id="_a0S8UI3nEeqxqdjegVwiog" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_zPanYI3nEeqxqdjegVwiog" source="_eXRT0I3nEeqxqdjegVwiog" target="_xvzOwI3nEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_xRXAIJHVEeqTjsJ3phJl1g" source="_xvzOwI3nEeqxqdjegVwiog" target="_wZ2JUJHVEeqTjsJ3phJl1g"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_eXRT0I3nEeqxqdjegVwiog" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_xvzOwI3nEeqxqdjegVwiog" name="sendError"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_wZ2JUJHVEeqTjsJ3phJl1g" name="FinalState4"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_jjzNoI3oEeqxqdjegVwiog" name="S2OrchestatorCheckMotorHealthStatus">
+        <region xmi:type="uml:Region" xmi:id="_mCCxsI3oEeqxqdjegVwiog" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_pfH5QJHdEeqTjsJ3phJl1g" source="_p7JxQI3oEeqxqdjegVwiog" target="_ngr2oJHdEeqTjsJ3phJl1g"/>
+          <transition xmi:type="uml:Transition" xmi:id="_593joJHdEeqTjsJ3phJl1g" source="_ngr2oJHdEeqTjsJ3phJl1g" target="_43YcsJHdEeqTjsJ3phJl1g"/>
+          <transition xmi:type="uml:Transition" xmi:id="_SzYEoJHeEeqTjsJ3phJl1g" source="_43YcsJHdEeqTjsJ3phJl1g" target="_Q4WiYJHeEeqTjsJ3phJl1g"/>
+          <transition xmi:type="uml:Transition" xmi:id="_jwTf0JHeEeqTjsJ3phJl1g" source="_ngr2oJHdEeqTjsJ3phJl1g" target="_Q4WiYJHeEeqTjsJ3phJl1g"/>
+          <transition xmi:type="uml:Transition" xmi:id="_0K5_IJHgEeqTjsJ3phJl1g" guard="_B-PzMJHhEeqTjsJ3phJl1g" source="_43YcsJHdEeqTjsJ3phJl1g" target="_zkXjkJHgEeqTjsJ3phJl1g">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_B-PzMJHhEeqTjsJ3phJl1g">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_B-PzMZHhEeqTjsJ3phJl1g">
+                <language>C</language>
+                <body>if(healthOk)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_p7JxQI3oEeqxqdjegVwiog" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ngr2oJHdEeqTjsJ3phJl1g" name="executeMovement"/>
+          <subvertex xmi:type="uml:State" xmi:id="_43YcsJHdEeqTjsJ3phJl1g" name="checkFinalPosition">
+            <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_5ssCIJHfEeqTjsJ3phJl1g">
+              <language>C</language>
+              <body>bool healthOk = True;&#xD;
+&#xD;
+for (i=0;i&lt;3 &amp;&amp; healthOk; i++){&#xD;
+	if(!checkIfFinalPosition[i]){&#xD;
+		healthOk = false;&#xD;
+	}&#xD;
+}</body>
+            </doActivity>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_Q4WiYJHeEeqTjsJ3phJl1g" name="Error"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_zkXjkJHgEeqTjsJ3phJl1g" name="FinalState9"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_bNafkI3qEeqxqdjegVwiog" name="S2OrchestratorMoveArm">
+        <region xmi:type="uml:Region" xmi:id="_hm-psI3qEeqxqdjegVwiog" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_rOsx4I3qEeqxqdjegVwiog" source="_ny4yUI3qEeqxqdjegVwiog" target="_p0rq8I3qEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_3XLH0JHVEeqTjsJ3phJl1g" source="_p0rq8I3qEeqxqdjegVwiog" target="_25SR8JHVEeqTjsJ3phJl1g"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_ny4yUI3qEeqxqdjegVwiog" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_p0rq8I3qEeqxqdjegVwiog" name="sendMovementToMotors"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_25SR8JHVEeqTjsJ3phJl1g" name="FinalState4"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_jHIGcI3tEeqxqdjegVwiog" name="S2OrchestatorExecuteMovement">
+        <region xmi:type="uml:Region" xmi:id="_keI8sI3tEeqxqdjegVwiog" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_Qx9QgI3uEeqxqdjegVwiog" source="_MA1q4I3uEeqxqdjegVwiog" target="_QVev4I3uEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_a9MVcI3uEeqxqdjegVwiog" source="_mqVHcI3tEeqxqdjegVwiog" target="_TXSUAI3uEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_p2RCgI3uEeqxqdjegVwiog" source="_MA1q4I3uEeqxqdjegVwiog" target="_TXSUAI3uEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_ng204I3vEeqxqdjegVwiog" source="_QVev4I3uEeqxqdjegVwiog" target="_TXSUAI3uEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_-epg0JHVEeqTjsJ3phJl1g" source="_QVev4I3uEeqxqdjegVwiog" target="_8zZf8JHVEeqTjsJ3phJl1g"/>
+          <transition xmi:type="uml:Transition" xmi:id="_8OBpMJ3iEeqgYck0ML35mQ" source="_mqVHcI3tEeqxqdjegVwiog" target="_MA1q4I3uEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_2GAsoJ3jEeqgYck0ML35mQ" guard="_MkV64J3kEeqgYck0ML35mQ" source="_nuMSgJ3jEeqgYck0ML35mQ" target="_mqVHcI3tEeqxqdjegVwiog">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_MkV64J3kEeqgYck0ML35mQ">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_MkV64Z3kEeqgYck0ML35mQ">
+                <language>C</language>
+                <body>if(isAngle)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_-aedMJ3jEeqgYck0ML35mQ" guard="_Q_TDQJ3kEeqgYck0ML35mQ" source="_nuMSgJ3jEeqgYck0ML35mQ" target="_5dJnkJ3jEeqgYck0ML35mQ">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_Q_TDQJ3kEeqgYck0ML35mQ">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_Q_TDQZ3kEeqgYck0ML35mQ">
+                <language>C</language>
+                <body>if(isXYZ)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="__HBaIJ3jEeqgYck0ML35mQ" source="_5dJnkJ3jEeqgYck0ML35mQ" target="_7ZHlAJ3jEeqgYck0ML35mQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="__kO6kJ3jEeqgYck0ML35mQ" source="_5dJnkJ3jEeqgYck0ML35mQ" target="_TXSUAI3uEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_AKY7oJ3kEeqgYck0ML35mQ" source="_7ZHlAJ3jEeqgYck0ML35mQ" target="_TXSUAI3uEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_Aqc7wJ3kEeqgYck0ML35mQ" source="_7ZHlAJ3jEeqgYck0ML35mQ" target="_QVev4I3uEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_Hbo7sJ3kEeqgYck0ML35mQ" source="_mV8y4I3tEeqxqdjegVwiog" target="_nuMSgJ3jEeqgYck0ML35mQ"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_mV8y4I3tEeqxqdjegVwiog" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_mqVHcI3tEeqxqdjegVwiog" name="decodeAngles"/>
+          <subvertex xmi:type="uml:State" xmi:id="_MA1q4I3uEeqxqdjegVwiog" name="computeAnglerMovement"/>
+          <subvertex xmi:type="uml:State" xmi:id="_QVev4I3uEeqxqdjegVwiog" name="moveArm"/>
+          <subvertex xmi:type="uml:State" xmi:id="_TXSUAI3uEeqxqdjegVwiog" name="errorState"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_8zZf8JHVEeqTjsJ3phJl1g" name="FinalState14"/>
+          <subvertex xmi:type="uml:State" xmi:id="_nuMSgJ3jEeqgYck0ML35mQ" name="checkKindOfMovement"/>
+          <subvertex xmi:type="uml:State" xmi:id="_5dJnkJ3jEeqgYck0ML35mQ" name="decodeXYZ"/>
+          <subvertex xmi:type="uml:State" xmi:id="_7ZHlAJ3jEeqgYck0ML35mQ" name="ComputeXYZMovement"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_P6ZEcI3wEeqxqdjegVwiog" name="S2OrchestratorExecuteOrder">
+        <region xmi:type="uml:Region" xmi:id="_RnopYI3wEeqxqdjegVwiog" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_72JdkI3wEeqxqdjegVwiog" source="_6sz28I3wEeqxqdjegVwiog" target="_6WxVgI3wEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_Vp6WkI3xEeqxqdjegVwiog" source="_6WxVgI3wEeqxqdjegVwiog" target="_U0GI4I3xEeqxqdjegVwiog"/>
+          <transition xmi:type="uml:Transition" xmi:id="_COKfgJHWEeqTjsJ3phJl1g" source="_U0GI4I3xEeqxqdjegVwiog" target="_BkEZoJHWEeqTjsJ3phJl1g"/>
+          <transition xmi:type="uml:Transition" xmi:id="_JZAPAJ3eEeqgYck0ML35mQ" source="_6WxVgI3wEeqxqdjegVwiog" target="_IQ4wYJ3eEeqgYck0ML35mQ"/>
+          <subvertex xmi:type="uml:State" xmi:id="_6WxVgI3wEeqxqdjegVwiog" name="decodeOrder"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_6sz28I3wEeqxqdjegVwiog" name="Initial2"/>
+          <subvertex xmi:type="uml:State" xmi:id="_U0GI4I3xEeqxqdjegVwiog" name="doOrder"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_BkEZoJHWEeqTjsJ3phJl1g" name="FinalState6"/>
+          <subvertex xmi:type="uml:State" xmi:id="_IQ4wYJ3eEeqgYck0ML35mQ" name="Error"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_MKx4oJHhEeqTjsJ3phJl1g" name="S2OrchestratorCancelMovement">
+        <region xmi:type="uml:Region" xmi:id="_OnQiIJHhEeqTjsJ3phJl1g" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_6GKnMJHhEeqTjsJ3phJl1g" source="_XR9ocJHhEeqTjsJ3phJl1g" target="_e_HhYJHhEeqTjsJ3phJl1g"/>
+          <transition xmi:type="uml:Transition" xmi:id="_6kL_8JHhEeqTjsJ3phJl1g" source="_e_HhYJHhEeqTjsJ3phJl1g" target="_5hZGMJHhEeqTjsJ3phJl1g"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_XR9ocJHhEeqTjsJ3phJl1g" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_e_HhYJHhEeqTjsJ3phJl1g" name="cancelMovement"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_5hZGMJHhEeqTjsJ3phJl1g" name="FinalState3"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_J0NNYJHiEeqTjsJ3phJl1g" name="S2OrchestratorLoop">
+        <region xmi:type="uml:Region" xmi:id="_PSL5AJHiEeqTjsJ3phJl1g" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_da45EJHiEeqTjsJ3phJl1g" source="_QJLLYJHiEeqTjsJ3phJl1g" target="_b7YOIJHiEeqTjsJ3phJl1g"/>
+          <transition xmi:type="uml:Transition" xmi:id="_sItYYJHiEeqTjsJ3phJl1g" guard="_yodqEJHiEeqTjsJ3phJl1g" source="_b7YOIJHiEeqTjsJ3phJl1g" target="_rRA7YJHiEeqTjsJ3phJl1g">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_yodqEJHiEeqTjsJ3phJl1g">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_yodqEZHiEeqTjsJ3phJl1g">
+                <language>C</language>
+                <body>if(uartInterrupt)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_G2VmsJHlEeqTjsJ3phJl1g" guard="_3ysKgJ3bEeqgYck0ML35mQ" source="_rRA7YJHiEeqTjsJ3phJl1g" target="_xdClIJ3dEeqgYck0ML35mQ">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_3ysKgJ3bEeqgYck0ML35mQ">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_3ysKgZ3bEeqgYck0ML35mQ">
+                <language>C</language>
+                <body>if(isMovement) </body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_15SvYJHnEeqTjsJ3phJl1g" source="_56whEJHkEeqTjsJ3phJl1g" target="_b7YOIJHiEeqTjsJ3phJl1g"/>
+          <transition xmi:type="uml:Transition" xmi:id="_qWd18J3bEeqgYck0ML35mQ" guard="_-oSJUJ3bEeqgYck0ML35mQ" source="_rRA7YJHiEeqTjsJ3phJl1g" target="_o499MJ3bEeqgYck0ML35mQ">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_-oSJUJ3bEeqgYck0ML35mQ">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_-oSJUZ3bEeqgYck0ML35mQ">
+                <language>C</language>
+                <body>if(isOrder)</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_rxpagJ3bEeqgYck0ML35mQ" source="_o499MJ3bEeqgYck0ML35mQ" target="_b7YOIJHiEeqTjsJ3phJl1g"/>
+          <transition xmi:type="uml:Transition" xmi:id="_gQVokJ3dEeqgYck0ML35mQ" source="_rRA7YJHiEeqTjsJ3phJl1g" target="_d_lt8J3dEeqgYck0ML35mQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_zeEowJ3dEeqgYck0ML35mQ" source="_xdClIJ3dEeqgYck0ML35mQ" target="_56whEJHkEeqTjsJ3phJl1g"/>
+          <transition xmi:type="uml:Transition" xmi:id="_3IKU4J3dEeqgYck0ML35mQ" source="_xdClIJ3dEeqgYck0ML35mQ" target="_d_lt8J3dEeqgYck0ML35mQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_K5vB8J3eEeqgYck0ML35mQ" source="_o499MJ3bEeqgYck0ML35mQ" target="_d_lt8J3dEeqgYck0ML35mQ"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_QJLLYJHiEeqTjsJ3phJl1g" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_b7YOIJHiEeqTjsJ3phJl1g" name="Idle"/>
+          <subvertex xmi:type="uml:State" xmi:id="_rRA7YJHiEeqTjsJ3phJl1g" name="interpretBitStream"/>
+          <subvertex xmi:type="uml:State" xmi:id="_56whEJHkEeqTjsJ3phJl1g" name="monitorMovement"/>
+          <subvertex xmi:type="uml:State" xmi:id="_o499MJ3bEeqgYck0ML35mQ" name="executeOrder"/>
+          <subvertex xmi:type="uml:State" xmi:id="_d_lt8J3dEeqgYck0ML35mQ" name="Error"/>
+          <subvertex xmi:type="uml:State" xmi:id="_xdClIJ3dEeqgYck0ML35mQ" name="executeMovement"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_7qSoMJHoEeqTjsJ3phJl1g" name="S2UartSendMessage">
+        <region xmi:type="uml:Region" xmi:id="_mncEAJHpEeqTjsJ3phJl1g" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_FecNYJHqEeqTjsJ3phJl1g" source="_CJ3eQJHqEeqTjsJ3phJl1g" target="_DQ4wsJHqEeqTjsJ3phJl1g"/>
+          <transition xmi:type="uml:Transition" xmi:id="_eCbMYJKhEeqReq0XGXSSKw" source="_DQ4wsJHqEeqTjsJ3phJl1g" target="_JdVE0JHqEeqTjsJ3phJl1g"/>
+          <transition xmi:type="uml:Transition" xmi:id="_sPjZcJKhEeqReq0XGXSSKw" source="_JdVE0JHqEeqTjsJ3phJl1g" target="_rC-RkJKhEeqReq0XGXSSKw"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_CJ3eQJHqEeqTjsJ3phJl1g" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_DQ4wsJHqEeqTjsJ3phJl1g" name="writeMessageInBuffer"/>
+          <subvertex xmi:type="uml:State" xmi:id="_JdVE0JHqEeqTjsJ3phJl1g" name="sendBufferContent"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_rC-RkJKhEeqReq0XGXSSKw" name="FinalState6"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_A-0d0JKiEeqReq0XGXSSKw" name="S2UartSetBaudrate">
+        <region xmi:type="uml:Region" xmi:id="_DcezEJKiEeqReq0XGXSSKw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_Ush-kJKiEeqReq0XGXSSKw" source="_PEf_EJKiEeqReq0XGXSSKw" target="_PdXLAJKiEeqReq0XGXSSKw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_VZ4MwJKiEeqReq0XGXSSKw" source="_PdXLAJKiEeqReq0XGXSSKw" target="_QIQiIJKiEeqReq0XGXSSKw"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_PEf_EJKiEeqReq0XGXSSKw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_PdXLAJKiEeqReq0XGXSSKw" name="setBaudrate"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_QIQiIJKiEeqReq0XGXSSKw" name="FinalState69"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_YuOSYJKiEeqReq0XGXSSKw" name="S2UartReceiveBitStream">
+        <region xmi:type="uml:Region" xmi:id="_aI12QJKiEeqReq0XGXSSKw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_VAZgUJKjEeqReq0XGXSSKw" source="_cWfZkJKiEeqReq0XGXSSKw" target="_c3cKgJKiEeqReq0XGXSSKw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_tnP6QJKjEeqReq0XGXSSKw" source="_c3cKgJKiEeqReq0XGXSSKw" target="_d4CE0JKiEeqReq0XGXSSKw"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_cWfZkJKiEeqReq0XGXSSKw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_c3cKgJKiEeqReq0XGXSSKw" name="saveToBuffer"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_d4CE0JKiEeqReq0XGXSSKw" name="FinalState3"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_ax-A4JKkEeqReq0XGXSSKw" name="S2MotorHandlerCheckMotorStatus">
+        <region xmi:type="uml:Region" xmi:id="_cThTMJKkEeqReq0XGXSSKw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_hLtxMJKkEeqReq0XGXSSKw" source="_falx0JKkEeqReq0XGXSSKw" target="_fuBEIJKkEeqReq0XGXSSKw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_hwl_4JKkEeqReq0XGXSSKw" source="_fuBEIJKkEeqReq0XGXSSKw" target="_gARRwJKkEeqReq0XGXSSKw"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_falx0JKkEeqReq0XGXSSKw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_fuBEIJKkEeqReq0XGXSSKw" name="checkIfFinalPosition">
+            <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_RRT9IJ3gEeqgYck0ML35mQ">
+              <language>C</language>
+              <body>isFinalPosition = (expectedDruation == actualDuration)</body>
+            </doActivity>
+          </subvertex>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_gARRwJKkEeqReq0XGXSSKw" name="FinalState3"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_DU-VgJKlEeqReq0XGXSSKw" name="S2MotorHandlerCancelMovement">
+        <region xmi:type="uml:Region" xmi:id="_E6wnkJKlEeqReq0XGXSSKw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_n_dgcJKlEeqReq0XGXSSKw" source="_HEAzEJKlEeqReq0XGXSSKw" target="_HVdIYJKlEeqReq0XGXSSKw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_ocmvcJKlEeqReq0XGXSSKw" source="_HVdIYJKlEeqReq0XGXSSKw" target="_TWZKsJKlEeqReq0XGXSSKw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_o3yPkJKlEeqReq0XGXSSKw" source="_TWZKsJKlEeqReq0XGXSSKw" target="_Hn8mkJKlEeqReq0XGXSSKw"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_HEAzEJKlEeqReq0XGXSSKw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_HVdIYJKlEeqReq0XGXSSKw" name="stopMotors"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_Hn8mkJKlEeqReq0XGXSSKw" name="FinalState3"/>
+          <subvertex xmi:type="uml:State" xmi:id="_TWZKsJKlEeqReq0XGXSSKw" name="saveActualTicks"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_QDIWAJXNEeqFNr1aLTn-tw" name="S2MotorHandlerSendMovementToMotors">
+        <region xmi:type="uml:Region" xmi:id="_Rn57cJXNEeqFNr1aLTn-tw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_V_XD4JXNEeqFNr1aLTn-tw" source="_TLenAJXNEeqFNr1aLTn-tw" target="_UixKEJXNEeqFNr1aLTn-tw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_m4p8QJXNEeqFNr1aLTn-tw" source="_UixKEJXNEeqFNr1aLTn-tw" target="_kC5QEJXNEeqFNr1aLTn-tw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_nhLfYJXOEeqFNr1aLTn-tw" source="_kC5QEJXNEeqFNr1aLTn-tw" target="_mGtFcJXOEeqFNr1aLTn-tw"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_TLenAJXNEeqFNr1aLTn-tw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_UixKEJXNEeqFNr1aLTn-tw" name="generatePWM"/>
+          <subvertex xmi:type="uml:State" xmi:id="_kC5QEJXNEeqFNr1aLTn-tw" name="sendMovemetToMotor"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_mGtFcJXOEeqFNr1aLTn-tw" name="FinalState6"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_v1HrgJXOEeqFNr1aLTn-tw" name="S2MotorHandlerInit">
+        <region xmi:type="uml:Region" xmi:id="_whx9MJXOEeqFNr1aLTn-tw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_2g_GkJXOEeqFNr1aLTn-tw" source="_y39KYJXOEeqFNr1aLTn-tw" target="_0SQlMJXOEeqFNr1aLTn-tw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_5myZ4JXOEeqFNr1aLTn-tw" source="_0SQlMJXOEeqFNr1aLTn-tw" target="_4N9lwJXOEeqFNr1aLTn-tw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_8dBnMJXOEeqFNr1aLTn-tw" source="_4N9lwJXOEeqFNr1aLTn-tw" target="_7r0MsJXOEeqFNr1aLTn-tw"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_y39KYJXOEeqFNr1aLTn-tw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_0SQlMJXOEeqFNr1aLTn-tw" name="setupMotorFlags"/>
+          <subvertex xmi:type="uml:State" xmi:id="_4N9lwJXOEeqFNr1aLTn-tw" name="registerMotorPins"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_7r0MsJXOEeqFNr1aLTn-tw" name="FinalState6"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_Lvv_sJdWEeq0NoQ0WyDLVg" name="S2MovementComputerInit">
+        <region xmi:type="uml:Region" xmi:id="_MxOq0JdWEeq0NoQ0WyDLVg" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_Xamn0JdXEeq0NoQ0WyDLVg" source="_S3g3IJdXEeq0NoQ0WyDLVg" target="_VXrGwJdXEeq0NoQ0WyDLVg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_davlUJdXEeq0NoQ0WyDLVg" source="_VXrGwJdXEeq0NoQ0WyDLVg" target="_ctnZkJdXEeq0NoQ0WyDLVg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_hc3W8JdXEeq0NoQ0WyDLVg" source="_ctnZkJdXEeq0NoQ0WyDLVg" target="_gxT4gJdXEeq0NoQ0WyDLVg"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_S3g3IJdXEeq0NoQ0WyDLVg" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_VXrGwJdXEeq0NoQ0WyDLVg" name="setupMatrices"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ctnZkJdXEeq0NoQ0WyDLVg" name="setupEndEffectorLength"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_gxT4gJdXEeq0NoQ0WyDLVg" name="FinalState6"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_Nd1x0JdZEeq0NoQ0WyDLVg" name="S2MovementComputerComputeAngleMovement">
+        <region xmi:type="uml:Region" xmi:id="_PPptsJdZEeq0NoQ0WyDLVg" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_vmVhIJdZEeq0NoQ0WyDLVg" source="_sTpoYJdZEeq0NoQ0WyDLVg" target="_toy2YJdZEeq0NoQ0WyDLVg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_Qs55YJdaEeq0NoQ0WyDLVg" guard="_qpORcJdaEeq0NoQ0WyDLVg" source="_toy2YJdZEeq0NoQ0WyDLVg" target="_OVJ-4JdaEeq0NoQ0WyDLVg">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_qpORcJdaEeq0NoQ0WyDLVg">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_41sXMJdaEeq0NoQ0WyDLVg">
+                <language>C</language>
+                <body>if anglesInConstraint</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_UL3TkJdaEeq0NoQ0WyDLVg" source="_OVJ-4JdaEeq0NoQ0WyDLVg" target="_TQjh4JdaEeq0NoQ0WyDLVg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_YzeX4JdaEeq0NoQ0WyDLVg" guard="_-5ByoJdaEeq0NoQ0WyDLVg" source="_toy2YJdZEeq0NoQ0WyDLVg" target="_XGM9wJdaEeq0NoQ0WyDLVg">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_-5ByoJdaEeq0NoQ0WyDLVg">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_-5ByoZdaEeq0NoQ0WyDLVg">
+                <language>C</language>
+                <body>if !anglesInConstraints</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_sTpoYJdZEeq0NoQ0WyDLVg" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_toy2YJdZEeq0NoQ0WyDLVg" name="checkAnglesInConstraint"/>
+          <subvertex xmi:type="uml:State" xmi:id="_OVJ-4JdaEeq0NoQ0WyDLVg" name="generateMovementArray"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_TQjh4JdaEeq0NoQ0WyDLVg" name="FinalState6"/>
+          <subvertex xmi:type="uml:State" xmi:id="_XGM9wJdaEeq0NoQ0WyDLVg" name="errorState"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_GnYlcJdbEeq0NoQ0WyDLVg" name="S2MovementComputerComputeXYZMovement">
+        <region xmi:type="uml:Region" xmi:id="_IMkakJdbEeq0NoQ0WyDLVg" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_RYHkIJdbEeq0NoQ0WyDLVg" source="_KvQZwJdbEeq0NoQ0WyDLVg" target="_VmCWEJdbEeq0NoQ0WyDLVg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_YLYnsJdbEeq0NoQ0WyDLVg" guard="_n76hMJdbEeq0NoQ0WyDLVg" source="_N5IUwJdbEeq0NoQ0WyDLVg" target="_bRxJ0JdbEeq0NoQ0WyDLVg">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_n76hMJdbEeq0NoQ0WyDLVg">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_n76hMZdbEeq0NoQ0WyDLVg">
+                <language>C</language>
+                <body>if AnglesInConstraint</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_dbAHMJdbEeq0NoQ0WyDLVg" source="_VmCWEJdbEeq0NoQ0WyDLVg" target="_N5IUwJdbEeq0NoQ0WyDLVg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_ggss0JdbEeq0NoQ0WyDLVg" source="_bRxJ0JdbEeq0NoQ0WyDLVg" target="_eedIQJdbEeq0NoQ0WyDLVg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_i79OUJdbEeq0NoQ0WyDLVg" guard="_sisfEJdbEeq0NoQ0WyDLVg" source="_N5IUwJdbEeq0NoQ0WyDLVg" target="_hHiDUJdbEeq0NoQ0WyDLVg">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_sisfEJdbEeq0NoQ0WyDLVg">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_sisfEZdbEeq0NoQ0WyDLVg">
+                <language>C</language>
+                <body>if !AnglesInConstraint</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_KvQZwJdbEeq0NoQ0WyDLVg" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_N5IUwJdbEeq0NoQ0WyDLVg" name="checkAnglesInConstraint"/>
+          <subvertex xmi:type="uml:State" xmi:id="_VmCWEJdbEeq0NoQ0WyDLVg" name="convertXYZToAngles"/>
+          <subvertex xmi:type="uml:State" xmi:id="_bRxJ0JdbEeq0NoQ0WyDLVg" name="computeAngleMovement"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_eedIQJdbEeq0NoQ0WyDLVg" name="FinalState8"/>
+          <subvertex xmi:type="uml:State" xmi:id="_hHiDUJdbEeq0NoQ0WyDLVg" name="errorState"/>
+        </region>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_wy22AIR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wy5SQIR-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w11RgIR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w12foIR-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//activities"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Activities"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w2VAwIR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w2VAwYR-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//allocations"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Allocations"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w2Vn0IR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w2Vn0YR-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//blocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w2Vn0oR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w2Vn04R-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//constraintblocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ConstraintBlocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w2WO4IR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w2WO4YR-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//deprecatedelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_DeprecatedElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w2WO4oR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w2WO44R-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//modelelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ModelElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w2W18IR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w2W18YR-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//portsandflows"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Ports_u0026Flows"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w2W18oR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w2XdAIR-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Requirements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w2XdAYR-Eeq_DfsVRqIeog">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w2XdAoR-Eeq_DfsVRqIeog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_N6b_wJHeEeqTjsJ3phJl1g">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_N6iGYJHeEeqTjsJ3phJl1g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+  </uml:Model>
+  <Blocks:Block xmi:id="_VFHcQISBEeqyoLukfulNrg" base_Class="_VEz6QISBEeqyoLukfulNrg"/>
+  <Blocks:Block xmi:id="_VP7lIISBEeqyoLukfulNrg" base_Class="_VP3TsISBEeqyoLukfulNrg"/>
+  <Blocks:Block xmi:id="_Vb7ZwISBEeqyoLukfulNrg" base_Class="_Vb2hQISBEeqyoLukfulNrg"/>
+  <Blocks:Block xmi:id="_VnqIoISBEeqyoLukfulNrg" base_Class="_VnmeQISBEeqyoLukfulNrg"/>
+  <Blocks:ValueType xmi:id="_inPnsISFEeqyoLukfulNrg" base_DataType="_inLWQISFEeqyoLukfulNrg"/>
+  <Blocks:ValueType xmi:id="_aAUPkJKmEeqReq0XGXSSKw" base_DataType="_aAJ3gJKmEeqReq0XGXSSKw"/>
+</xmi:XMI>
