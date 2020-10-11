@@ -40,10 +40,11 @@
       <transition xmi:type="uml:Transition" xmi:id="_YkkZIFsVEeq-0ItwRsbHAg" name="Notify error" source="_OfPu8FsVEeq-0ItwRsbHAg" target="_Vfe3gFsVEeq-0ItwRsbHAg"/>
       <transition xmi:type="uml:Transition" xmi:id="_MDIDEFsbEeq-0ItwRsbHAg" name="Handle input data" source="_T5tB8FsUEeq-0ItwRsbHAg" target="_LHW-YFsbEeq-0ItwRsbHAg"/>
       <transition xmi:type="uml:Transition" xmi:id="_blfkwFsbEeq-0ItwRsbHAg" name="Yes" source="_LHW-YFsbEeq-0ItwRsbHAg" target="_kEsC0FsUEeq-0ItwRsbHAg"/>
-      <transition xmi:type="uml:Transition" xmi:id="_5BvnYFsbEeq-0ItwRsbHAg" name="No" source="_LHW-YFsbEeq-0ItwRsbHAg" target="_0R3-8FsbEeq-0ItwRsbHAg"/>
-      <transition xmi:type="uml:Transition" xmi:id="_DSYwwFscEeq-0ItwRsbHAg" name="No" source="_0R3-8FsbEeq-0ItwRsbHAg" target="_AYM3kFscEeq-0ItwRsbHAg"/>
       <transition xmi:type="uml:Transition" xmi:id="_HSV_MFscEeq-0ItwRsbHAg" name="Abort execution" source="_AYM3kFscEeq-0ItwRsbHAg" target="_Vfe3gFsVEeq-0ItwRsbHAg"/>
-      <transition xmi:type="uml:Transition" xmi:id="_WqJPoFscEeq-0ItwRsbHAg" name="Yes" source="_0R3-8FsbEeq-0ItwRsbHAg" target="_ULBh0FscEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_mp760AutEeuxb8NW84V6QA" name="No" source="_LHW-YFsbEeq-0ItwRsbHAg" target="_hj_7wAutEeuxb8NW84V6QA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_tbREsAutEeuxb8NW84V6QA" name="Yes" source="_hj_7wAutEeuxb8NW84V6QA" target="_o5Er4AutEeuxb8NW84V6QA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_wUiX4AutEeuxb8NW84V6QA" name="Continue execution" source="_o5Er4AutEeuxb8NW84V6QA" target="_ULBh0FscEeq-0ItwRsbHAg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_4fNTQAutEeuxb8NW84V6QA" name="No" source="_hj_7wAutEeuxb8NW84V6QA" target="_AYM3kFscEeq-0ItwRsbHAg"/>
       <subvertex xmi:type="uml:Pseudostate" xmi:id="_PV_-8FNNEeqpnJZsrUAtSg" name="Normal function mode"/>
       <subvertex xmi:type="uml:State" xmi:id="_FPFnoFsUEeq-0ItwRsbHAg" name="Waiting for input"/>
       <subvertex xmi:type="uml:State" xmi:id="_T5tB8FsUEeq-0ItwRsbHAg" name="Validate input"/>
@@ -53,9 +54,10 @@
       <subvertex xmi:type="uml:State" xmi:id="_OfPu8FsVEeq-0ItwRsbHAg" name="Wrong input data"/>
       <subvertex xmi:type="uml:FinalState" xmi:id="_Vfe3gFsVEeq-0ItwRsbHAg" name="Errors during execution"/>
       <subvertex xmi:type="uml:Pseudostate" xmi:id="_LHW-YFsbEeq-0ItwRsbHAg" name="Is the input a movement?" kind="choice"/>
-      <subvertex xmi:type="uml:Pseudostate" xmi:id="_0R3-8FsbEeq-0ItwRsbHAg" name="Is the input a system close event?" kind="choice"/>
       <subvertex xmi:type="uml:State" xmi:id="_AYM3kFscEeq-0ItwRsbHAg" name="Unexpected input"/>
-      <subvertex xmi:type="uml:FinalState" xmi:id="_ULBh0FscEeq-0ItwRsbHAg" name="System power off"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_ULBh0FscEeq-0ItwRsbHAg" name="Normal function mode"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_hj_7wAutEeuxb8NW84V6QA" name="Is the input a port selection?" kind="choice"/>
+      <subvertex xmi:type="uml:State" xmi:id="_o5Er4AutEeuxb8NW84V6QA" name="New port selected"/>
     </region>
   </packagedElement>
   <packagedElement xmi:type="uml:StateMachine" xmi:id="_Mtdy0FsWEeq-0ItwRsbHAg" name="RobotMovementMode">
